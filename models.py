@@ -65,7 +65,7 @@ def train_torch():
     return custom_train_torch
 
 def test_torch():
-    def custom_test_torch(model, test_loader):
+    def custom_test_torch(model, test_loader, cfg=None):
         criterion = nn.MSELoss()
         model.eval()
         test_losses = []

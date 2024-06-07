@@ -1,0 +1,5 @@
+[2024-06-07 16:25:03,409][__main__][INFO] - data loaded
+[2024-06-07 16:25:03,431][__main__][INFO] - Latest Local Model download
+[2024-06-07 16:25:03,432][root][INFO] - downloaded local_model_name: SMILESModel_local_model_V1.pth
+[2024-06-07 16:25:03,435][root][INFO] - init model_type: Pytorch
+[2024-06-07 16:28:06,320][root][INFO] - ccl-y-server;f0:2f:74:96:d6:64-client close
