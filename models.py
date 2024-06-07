@@ -6,8 +6,10 @@ import torch.nn.functional as F
 from tqdm import tqdm
 
 class SMILESModel(nn.Module):
-    def __init__(self, input_dim, hidden_dim, output_size, n_layers=1):
+    def __init__(self, output_size, n_layers=1):
         super(SMILESModel, self).__init__()
+        input_dim = 25
+        hidden_dim = 128
         self.embedding = nn.Embedding(input_dim, hidden_dim)
         self.rnn = nn.RNN(hidden_dim, hidden_dim, n_layers, batch_first=True)
         self.fc = nn.Linear(hidden_dim, output_size)
