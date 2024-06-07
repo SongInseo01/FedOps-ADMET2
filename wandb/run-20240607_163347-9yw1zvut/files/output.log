@@ -1,0 +1,436 @@
+[2024-06-07 16:33:58,673][root][INFO] - label_values: [[0, 0]]
+[2024-06-07 16:33:58,673][flwr][WARNING] - DEPRECATED FEATURE: flwr.client.start_numpy_client() is deprecated.
+	Instead, use `flwr.client.start_client()` by ensuring you first call the `.to_client()` method as shown below:
+	flwr.client.start_client(
+		server_address='<IP>:<PORT>',
+		client=FlowerClient().to_client(), # <-- where FlowerClient is of type flwr.client.NumPyClient object
+	)
+	Using `start_numpy_client()` is deprecated.
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+[32mINFO[39m:     127.0.0.1:42496 - "[1mGET /online HTTP/1.1[22m" [32m200 OK
+[2024-06-07 16:33:58,687][flwr][DEBUG] - Opened insecure gRPC connection (no certificates were passed)
+[2024-06-07 16:33:58,690][flwr][DEBUG] - ChannelConnectivity.IDLE
+[2024-06-07 16:33:58,691][flwr][DEBUG] - ChannelConnectivity.CONNECTING
+[2024-06-07 16:33:58,696][flwr][DEBUG] - ChannelConnectivity.READY
+[2024-06-07 16:33:58,721][flwr][INFO] -
+[2024-06-07 16:33:58,721][flwr][INFO] - [RUN 0, ROUND ]
+[2024-06-07 16:33:58,721][flwr][INFO] - Received: train message 59b2175e-c698-4796-8045-f0c09a16a0a9
+config: {'batch_size': 128, 'local_epochs': 5, 'num_rounds': 5}
+Starting training...
+Epoch 1/5, Loss: 23.0642
+Epoch 1/5, Validation Loss: 23.7128
+Epoch 2/5, Loss: 22.6044
+Epoch 2/5, Validation Loss: 22.4793
+Epoch 3/5, Loss: 21.3638
+Epoch 3/5, Validation Loss: 21.2915
+Epoch 4/5, Loss: 19.6660
+Epoch 4/5, Validation Loss: 20.1543
+Epoch 5/5, Loss: 19.9085
+Epoch 5/5, Validation Loss: 19.0651
+Starting evaluation...
+Mean Test Loss: 18.0204
+loss: 18.0204
+Starting evaluation...
+Mean Test Loss: 19.0651
+loss: 19.0651
+[2024-06-07 16:33:59,389][fedops.client.client_fl][INFO] - train_performance - {"fl_task_id": "admet2", "client_mac": "f0:2f:74:96:d6:64", "client_name": "ccl-y-server", "round": 1, "gl_model_v": 1, "train_loss": 18.020371437072754, "train_accuracy": null, "val_loss": 19.065115928649902, "val_accuracy": null, "train_time": 0.663870096206665, "wandb_name": "ccl-y-server-v0(2024-06-07 16:32:05.574154)"}
+[2024-06-07 16:33:59,400][flwr][ERROR] - Client raised an exception.
+Traceback (most recent call last):
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/client/app.py", line 496, in _start_client_internal
+    reply_message = client_app(message=message, context=context)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/client/client_app.py", line 98, in __call__
+    return self._call(message, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/client/client_app.py", line 81, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/client/message_handler/message_handler.py", line 134, in handle_legacy_message_from_msgtype
+    out_recordset = fitres_to_recordset(fit_res, keep_input=False)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/common/recordset_compat.py", line 223, in fitres_to_recordset
+    recordset.configs_records[f"{res_str}.metrics"] = ConfigsRecord(
+                                                      ^^^^^^^^^^^^^^
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/common/record/configsrecord.py", line 85, in __init__
+    self[k] = configs_dict[k]
+    ~~~~^^^
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/common/record/typeddict.py", line 38, in __setitem__
+    self._check_value_fn(value)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/common/record/configsrecord.py", line 57, in _check_value
+    is_valid(value)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/common/record/configsrecord.py", line 35, in is_valid
+    raise TypeError(
+TypeError: Not all values are of valid type. Expected `typing.Union[int, float, str, bytes, bool, typing.List[int], typing.List[float], typing.List[str], typing.List[bytes], typing.List[bool]]` but `<class 'NoneType'>` was passed.
+[2024-06-07 16:33:59,592][flwr][DEBUG] - gRPC channel closed
+[93mWARNING [39m:   DEPRECATED FEATURE: flwr.client.start_numpy_client() is deprecated.
+	Instead, use `flwr.client.start_client()` by ensuring you first call the `.to_client()` method as shown below:
+	flwr.client.start_client(
+		server_address='<IP>:<PORT>',
+		client=FlowerClient().to_client(), # <-- where FlowerClient is of type flwr.client.NumPyClient object
+	)
+	Using `start_numpy_client()` is deprecated.
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+[92mINFO [39m:
+[92mINFO [39m:      [RUN 0, ROUND ]
+[92mINFO [39m:      Received: train message 59b2175e-c698-4796-8045-f0c09a16a0a9
+100%|████████████████████████████████████████████████████████████████████| 2/2 [00:00<00:00, 25.78it/s]
+100%|████████████████████████████████████████████████████████████████████| 2/2 [00:00<00:00, 70.86it/s]
+100%|████████████████████████████████████████████████████████████████████| 2/2 [00:00<00:00, 66.74it/s]
+100%|████████████████████████████████████████████████████████████████████| 2/2 [00:00<00:00, 66.80it/s]
+100%|████████████████████████████████████████████████████████████████████| 2/2 [00:00<00:00, 67.78it/s]
+100%|███████████████████████████████████████████████████████████████████| 2/2 [00:00<00:00, 130.96it/s]
+100%|███████████████████████████████████████████████████████████████████| 2/2 [00:00<00:00, 120.90it/s]
+[91mERROR [39m:     Client raised an exception.
+Traceback (most recent call last):
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/client/app.py", line 496, in _start_client_internal
+    reply_message = client_app(message=message, context=context)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/client/client_app.py", line 98, in __call__
+    return self._call(message, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/client/client_app.py", line 81, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/client/message_handler/message_handler.py", line 134, in handle_legacy_message_from_msgtype
+    out_recordset = fitres_to_recordset(fit_res, keep_input=False)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/common/recordset_compat.py", line 223, in fitres_to_recordset
+    recordset.configs_records[f"{res_str}.metrics"] = ConfigsRecord(
+                                                      ^^^^^^^^^^^^^^
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/common/record/configsrecord.py", line 85, in __init__
+    self[k] = configs_dict[k]
+    ~~~~^^^
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/common/record/typeddict.py", line 38, in __setitem__
+    self._check_value_fn(value)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/common/record/configsrecord.py", line 57, in _check_value
+    is_valid(value)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/common/record/configsrecord.py", line 35, in is_valid
+    raise TypeError(
+TypeError: Not all values are of valid type. Expected `typing.Union[int, float, str, bytes, bool, typing.List[int], typing.List[float], typing.List[str], typing.List[bytes], typing.List[bool]]` but `<class 'NoneType'>` was passed.
+--- Logging error ---
+Traceback (most recent call last):
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/fedops/client/app.py", line 123, in fl_client_start
+    await loop.run_in_executor(None, client_start)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/client/app.py", line 643, in start_numpy_client
+    start_client(
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/client/app.py", line 291, in start_client
+    _start_client_internal(
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/client/app.py", line 503, in _start_client_internal
+    raise ex
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/client/app.py", line 496, in _start_client_internal
+    reply_message = client_app(message=message, context=context)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/client/client_app.py", line 98, in __call__
+    return self._call(message, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/client/client_app.py", line 81, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/client/message_handler/message_handler.py", line 134, in handle_legacy_message_from_msgtype
+    out_recordset = fitres_to_recordset(fit_res, keep_input=False)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/common/recordset_compat.py", line 223, in fitres_to_recordset
+    recordset.configs_records[f"{res_str}.metrics"] = ConfigsRecord(
+                                                      ^^^^^^^^^^^^^^
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/common/record/configsrecord.py", line 85, in __init__
+    self[k] = configs_dict[k]
+    ~~~~^^^
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/common/record/typeddict.py", line 38, in __setitem__
+    self._check_value_fn(value)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/common/record/configsrecord.py", line 57, in _check_value
+    is_valid(value)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/common/record/configsrecord.py", line 35, in is_valid
+    raise TypeError(
+TypeError: Not all values are of valid type. Expected `typing.Union[int, float, str, bytes, bool, typing.List[int], typing.List[float], typing.List[str], typing.List[bytes], typing.List[bool]]` but `<class 'NoneType'>` was passed.
+During handling of the above exception, another exception occurred:
+Traceback (most recent call last):
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/logging/__init__.py", line 1110, in emit
+    msg = self.format(record)
+          ^^^^^^^^^^^^^^^^^^^
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/logging/__init__.py", line 953, in format
+    return fmt.format(record)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/logging/__init__.py", line 687, in format
+    record.message = record.getMessage()
+                     ^^^^^^^^^^^^^^^^^^^
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/logging/__init__.py", line 377, in getMessage
+    msg = msg % self.args
+          ~~~~^~~~~~~~~~~
+TypeError: not all arguments converted during string formatting
+Call stack:
+  File "/home/ccl/Desktop/isfolder/issrc/fedops/FedOps-ADMET2/client_main.py", line 88, in <module>
+    main()
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/hydra/main.py", line 94, in decorated_main
+    _run_hydra(
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/hydra/_internal/utils.py", line 394, in _run_hydra
+    _run_app(
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/hydra/_internal/utils.py", line 457, in _run_app
+    run_and_report(
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/hydra/_internal/utils.py", line 220, in run_and_report
+    return func()
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/hydra/_internal/utils.py", line 458, in <lambda>
+    lambda: hydra.run(
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/hydra/_internal/hydra.py", line 119, in run
+    ret = run_job(
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/hydra/core/utils.py", line 186, in run_job
+    ret.return_value = task_function(task_cfg)
+  File "/home/ccl/Desktop/isfolder/issrc/fedops/FedOps-ADMET2/client_main.py", line 84, in main
+    fl_client.start()
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/fedops/client/app.py", line 202, in start
+    uvicorn.run(self.app, host='0.0.0.0', port=self.client_port)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/uvicorn/main.py", line 587, in run
+    server.run()
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/uvicorn/server.py", line 61, in run
+    return asyncio.run(self.serve(sockets=sockets))
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/asyncio/runners.py", line 190, in run
+    return runner.run(main)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/uvicorn/protocols/http/httptools_impl.py", line 426, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/uvicorn/middleware/proxy_headers.py", line 84, in __call__
+    return await self.app(scope, receive, send)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/starlette/applications.py", line 116, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/starlette/_exception_handler.py", line 44, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/starlette/routing.py", line 746, in __call__
+    await route.handle(scope, receive, send)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/starlette/routing.py", line 75, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/starlette/_exception_handler.py", line 44, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/starlette/routing.py", line 73, in app
+    await response(scope, receive, send)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/starlette/responses.py", line 156, in __call__
+    await self.background()
+[2024-06-07 16:33:59,611][root][INFO] - notify_fail start
+[2024-06-07 16:33:59,631][root][ERROR] - trainFin
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/starlette/background.py", line 43, in __call__
+    await task()
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/starlette/background.py", line 26, in __call__
+    await self.func(*self.args, **self.kwargs)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/fedops/client/app.py", line 159, in fl_client_start
+    logging.info('[E][PC0002] learning', e)
+Message: '[E][PC0002] learning'
+Arguments: (TypeError("Not all values are of valid type. Expected `typing.Union[int, float, str, bytes, bool, typing.List[int], typing.List[float], typing.List[str], typing.List[bytes], typing.List[bool]]` but `<class 'NoneType'>` was passed."),)
+--- Logging error ---
+Traceback (most recent call last):
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/fedops/client/app.py", line 123, in fl_client_start
+    await loop.run_in_executor(None, client_start)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/client/app.py", line 643, in start_numpy_client
+    start_client(
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/client/app.py", line 291, in start_client
+    _start_client_internal(
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/client/app.py", line 503, in _start_client_internal
+    raise ex
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/client/app.py", line 496, in _start_client_internal
+    reply_message = client_app(message=message, context=context)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/client/client_app.py", line 98, in __call__
+    return self._call(message, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/client/client_app.py", line 81, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/client/message_handler/message_handler.py", line 134, in handle_legacy_message_from_msgtype
+    out_recordset = fitres_to_recordset(fit_res, keep_input=False)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/common/recordset_compat.py", line 223, in fitres_to_recordset
+    recordset.configs_records[f"{res_str}.metrics"] = ConfigsRecord(
+                                                      ^^^^^^^^^^^^^^
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/common/record/configsrecord.py", line 85, in __init__
+    self[k] = configs_dict[k]
+    ~~~~^^^
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/common/record/typeddict.py", line 38, in __setitem__
+    self._check_value_fn(value)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/common/record/configsrecord.py", line 57, in _check_value
+    is_valid(value)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/common/record/configsrecord.py", line 35, in is_valid
+    raise TypeError(
+TypeError: Not all values are of valid type. Expected `typing.Union[int, float, str, bytes, bool, typing.List[int], typing.List[float], typing.List[str], typing.List[bytes], typing.List[bool]]` but `<class 'NoneType'>` was passed.
+During handling of the above exception, another exception occurred:
+Traceback (most recent call last):
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/logging/__init__.py", line 1110, in emit
+    msg = self.format(record)
+          ^^^^^^^^^^^^^^^^^^^
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/logging/__init__.py", line 953, in format
+    return fmt.format(record)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/logging/__init__.py", line 687, in format
+    record.message = record.getMessage()
+                     ^^^^^^^^^^^^^^^^^^^
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/logging/__init__.py", line 377, in getMessage
+    msg = msg % self.args
+          ~~~~^~~~~~~~~~~
+TypeError: not all arguments converted during string formatting
+Call stack:
+  File "/home/ccl/Desktop/isfolder/issrc/fedops/FedOps-ADMET2/client_main.py", line 88, in <module>
+    main()
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/hydra/main.py", line 94, in decorated_main
+    _run_hydra(
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/hydra/_internal/utils.py", line 394, in _run_hydra
+    _run_app(
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/hydra/_internal/utils.py", line 457, in _run_app
+    run_and_report(
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/hydra/_internal/utils.py", line 220, in run_and_report
+    return func()
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/hydra/_internal/utils.py", line 458, in <lambda>
+    lambda: hydra.run(
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/hydra/_internal/hydra.py", line 119, in run
+    ret = run_job(
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/hydra/core/utils.py", line 186, in run_job
+    ret.return_value = task_function(task_cfg)
+  File "/home/ccl/Desktop/isfolder/issrc/fedops/FedOps-ADMET2/client_main.py", line 84, in main
+    fl_client.start()
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/fedops/client/app.py", line 202, in start
+    uvicorn.run(self.app, host='0.0.0.0', port=self.client_port)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/uvicorn/main.py", line 587, in run
+    server.run()
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/uvicorn/server.py", line 61, in run
+    return asyncio.run(self.serve(sockets=sockets))
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/asyncio/runners.py", line 190, in run
+    return runner.run(main)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/uvicorn/protocols/http/httptools_impl.py", line 426, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/uvicorn/middleware/proxy_headers.py", line 84, in __call__
+    return await self.app(scope, receive, send)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/starlette/applications.py", line 116, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/starlette/_exception_handler.py", line 44, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/starlette/routing.py", line 746, in __call__
+    await route.handle(scope, receive, send)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/starlette/routing.py", line 75, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/starlette/_exception_handler.py", line 44, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/starlette/routing.py", line 73, in app
+    await response(scope, receive, send)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/starlette/responses.py", line 156, in __call__
+    await self.background()
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/starlette/background.py", line 43, in __call__
+    await task()
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/starlette/background.py", line 26, in __call__
+    await self.func(*self.args, **self.kwargs)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/fedops/client/app.py", line 159, in fl_client_start
+    logging.info('[E][PC0002] learning', e)
+Message: '[E][PC0002] learning'
+Arguments: (TypeError("Not all values are of valid type. Expected `typing.Union[int, float, str, bytes, bool, typing.List[int], typing.List[float], typing.List[str], typing.List[bytes], typing.List[bool]]` but `<class 'NoneType'>` was passed."),)
+[31mERROR[39m:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/uvicorn/protocols/http/httptools_impl.py", line 426, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/uvicorn/middleware/proxy_headers.py", line 84, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/starlette/applications.py", line 116, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/starlette/_exception_handler.py", line 55, in wrapped_app
+    raise exc
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/starlette/_exception_handler.py", line 44, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/starlette/routing.py", line 746, in __call__
+    await route.handle(scope, receive, send)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/starlette/routing.py", line 75, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/starlette/_exception_handler.py", line 55, in wrapped_app
+    raise exc
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/starlette/_exception_handler.py", line 44, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/starlette/routing.py", line 73, in app
+    await response(scope, receive, send)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/starlette/responses.py", line 156, in __call__
+    await self.background()
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/starlette/background.py", line 43, in __call__
+    await task()
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/starlette/background.py", line 26, in __call__
+    await self.func(*self.args, **self.kwargs)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/fedops/client/app.py", line 162, in fl_client_start
+    raise e
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/fedops/client/app.py", line 123, in fl_client_start
+    await loop.run_in_executor(None, client_start)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/client/app.py", line 643, in start_numpy_client
+    start_client(
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/client/app.py", line 291, in start_client
+    _start_client_internal(
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/client/app.py", line 503, in _start_client_internal
+    raise ex
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/client/app.py", line 496, in _start_client_internal
+    reply_message = client_app(message=message, context=context)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/client/client_app.py", line 98, in __call__
+    return self._call(message, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/client/client_app.py", line 81, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/client/message_handler/message_handler.py", line 134, in handle_legacy_message_from_msgtype
+    out_recordset = fitres_to_recordset(fit_res, keep_input=False)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/common/recordset_compat.py", line 223, in fitres_to_recordset
+    recordset.configs_records[f"{res_str}.metrics"] = ConfigsRecord(
+                                                      ^^^^^^^^^^^^^^
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/common/record/configsrecord.py", line 85, in __init__
+    self[k] = configs_dict[k]
+    ~~~~^^^
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/common/record/typeddict.py", line 38, in __setitem__
+    self._check_value_fn(value)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/common/record/configsrecord.py", line 57, in _check_value
+    is_valid(value)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/common/record/configsrecord.py", line 35, in is_valid
+    raise TypeError(
+TypeError: Not all values are of valid type. Expected `typing.Union[int, float, str, bytes, bool, typing.List[int], typing.List[float], typing.List[str], typing.List[bytes], typing.List[bool]]` but `<class 'NoneType'>` was passed.
+[32mINFO[39m:     127.0.0.1:57868 - "[1mGET /online HTTP/1.1[22m" [32m200 OK
+[32mINFO[39m:     127.0.0.1:38432 - "[1mGET /online HTTP/1.1[22m" [32m200 OK
+[32mINFO[39m:     127.0.0.1:38436 - "[1mGET /online HTTP/1.1[22m" [32m200 OK
+[32mINFO[39m:     127.0.0.1:46720 - "[1mGET /online HTTP/1.1[22m" [32m200 OK
+[32mINFO[39m:     127.0.0.1:58930 - "[1mGET /online HTTP/1.1[22m" [32m200 OK
+[32mINFO[39m:     127.0.0.1:58944 - "[1mGET /online HTTP/1.1[22m" [32m200 OK
+[32mINFO[39m:     127.0.0.1:50910 - "[1mGET /online HTTP/1.1[22m" [32m200 OK
+[32mINFO[39m:     127.0.0.1:50916 - "[1mGET /online HTTP/1.1[22m" [32m200 OK
+[32mINFO[39m:     127.0.0.1:36612 - "[1mGET /online HTTP/1.1[22m" [32m200 OK
+[32mINFO[39m:     127.0.0.1:54266 - "[1mGET /online HTTP/1.1[22m" [32m200 OK
+[32mINFO[39m:     127.0.0.1:54268 - "[1mGET /online HTTP/1.1[22m" [32m200 OK
+[32mINFO[39m:     127.0.0.1:47322 - "[1mGET /online HTTP/1.1[22m" [32m200 OK
+[32mINFO[39m:     127.0.0.1:47336 - "[1mGET /online HTTP/1.1[22m" [32m200 OK

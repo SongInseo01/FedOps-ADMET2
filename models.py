@@ -82,7 +82,7 @@ def test_torch():
                 all_predictions.extend(outputs.numpy())
 
         average_loss = sum(test_losses) / len(test_losses)
-        accuracy = None  # Accuracy metric can be defined based on the specific task, if required
+        accuracy = 0.0  # Accuracy metric can be defined based on the specific task, if required
         # f1 = f1_score(all_targets, [1 if pred > 0.5 else 0 for pred in all_predictions])  # Example threshold for binary classification
 
         metrics = {"loss": average_loss}
