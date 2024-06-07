@@ -1,0 +1,64 @@
+[2024-06-07 15:59:34,310][__main__][INFO] - data loaded
+[2024-06-07 15:59:34,330][root][INFO] - init model_type: Pytorch
+[2024-06-07 16:02:11,856][root][INFO] - bulid model
+[2024-06-07 16:02:11,856][root][INFO] - FL start
+[2024-06-07 16:02:11,866][fedops.client.client_api][INFO] - FL_server_IP:port - ccl.gachon.ac.kr:40021
+[2024-06-07 16:02:11,867][root][INFO] - FL learning ready
+[2024-06-07 16:02:11,867][root][INFO] - fl_task_id: admet2
+[2024-06-07 16:02:11,867][root][INFO] - dataset: carboxylic
+[2024-06-07 16:02:11,868][root][INFO] - output_size: 1
+[2024-06-07 16:02:11,868][root][INFO] - validation_split: 0.2
+[2024-06-07 16:02:11,868][root][INFO] - model_type: Pytorch
+[2024-06-07 16:02:11,868][root][INFO] - wandb_key: ce53e10675102394f9c8ac9f89c76bcbf14ea805
+[2024-06-07 16:02:11,868][root][INFO] - wandb_account: z8086486
+[2024-06-07 16:02:25,710][root][INFO] - label_values: [[0, 0]]
+[2024-06-07 16:02:25,711][flwr][WARNING] - DEPRECATED FEATURE: flwr.client.start_numpy_client() is deprecated. 
+	Instead, use `flwr.client.start_client()` by ensuring you first call the `.to_client()` method as shown below: 
+	flwr.client.start_client(
+		server_address='<IP>:<PORT>',
+		client=FlowerClient().to_client(), # <-- where FlowerClient is of type flwr.client.NumPyClient object
+	)
+	Using `start_numpy_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+[2024-06-07 16:02:25,725][flwr][DEBUG] - Opened insecure gRPC connection (no certificates were passed)
+[2024-06-07 16:02:25,728][flwr][DEBUG] - ChannelConnectivity.IDLE
+[2024-06-07 16:02:25,729][flwr][DEBUG] - ChannelConnectivity.CONNECTING
+[2024-06-07 16:02:25,733][flwr][DEBUG] - ChannelConnectivity.READY
+[2024-06-07 16:02:25,748][flwr][INFO] - 
+[2024-06-07 16:02:25,748][flwr][INFO] - [RUN 0, ROUND ]
+[2024-06-07 16:02:25,748][flwr][INFO] - Received: train message 9c32b272-0293-4d2c-961a-6285d4033b91
+[2024-06-07 16:02:26,016][fedops.client.client_fl][INFO] - train_performance - {"fl_task_id": "admet2", "client_mac": "f0:2f:74:96:d6:64", "client_name": "ccl-y-server", "round": 1, "gl_model_v": 1, "train_loss": 14.815929412841797, "train_accuracy": null, "val_loss": 14.174104690551758, "val_accuracy": null, "train_time": 0.26478123664855957, "wandb_name": "ccl-y-server-v0(2024-06-07 15:59:34.331237)"}
+[2024-06-07 16:02:26,027][flwr][ERROR] - Client raised an exception.
+Traceback (most recent call last):
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/client/app.py", line 496, in _start_client_internal
+    reply_message = client_app(message=message, context=context)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/client/client_app.py", line 98, in __call__
+    return self._call(message, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/client/client_app.py", line 81, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/client/message_handler/message_handler.py", line 134, in handle_legacy_message_from_msgtype
+    out_recordset = fitres_to_recordset(fit_res, keep_input=False)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/common/recordset_compat.py", line 223, in fitres_to_recordset
+    recordset.configs_records[f"{res_str}.metrics"] = ConfigsRecord(
+                                                      ^^^^^^^^^^^^^^
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/common/record/configsrecord.py", line 85, in __init__
+    self[k] = configs_dict[k]
+    ~~~~^^^
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/common/record/typeddict.py", line 38, in __setitem__
+    self._check_value_fn(value)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/common/record/configsrecord.py", line 57, in _check_value
+    is_valid(value)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/common/record/configsrecord.py", line 35, in is_valid
+    raise TypeError(
+TypeError: Not all values are of valid type. Expected `typing.Union[int, float, str, bytes, bool, typing.List[int], typing.List[float], typing.List[str], typing.List[bytes], typing.List[bool]]` but `<class 'NoneType'>` was passed.
+[2024-06-07 16:02:26,139][flwr][DEBUG] - gRPC channel closed
+[2024-06-07 16:02:26,157][root][INFO] - notify_fail start
+[2024-06-07 16:02:26,176][root][ERROR] - trainFin
+[2024-06-07 16:04:18,202][root][INFO] - ccl-y-server;f0:2f:74:96:d6:64-client close

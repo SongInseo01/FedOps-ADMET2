@@ -1,0 +1,60 @@
+[2024-06-07 15:48:07,453][__main__][INFO] - data loaded
+[2024-06-07 15:48:07,474][root][INFO] - init model_type: Pytorch
+[2024-06-07 15:50:54,488][root][INFO] - bulid model
+[2024-06-07 15:50:54,490][root][INFO] - FL start
+[2024-06-07 15:50:54,500][fedops.client.client_api][INFO] - FL_server_IP:port - ccl.gachon.ac.kr:40021
+[2024-06-07 15:50:54,501][root][INFO] - FL learning ready
+[2024-06-07 15:50:54,501][root][INFO] - fl_task_id: admet2
+[2024-06-07 15:50:54,501][root][INFO] - dataset: carboxylic
+[2024-06-07 15:50:54,502][root][INFO] - output_size: 1
+[2024-06-07 15:50:54,502][root][INFO] - validation_split: 0.2
+[2024-06-07 15:50:54,502][root][INFO] - model_type: Pytorch
+[2024-06-07 15:50:54,502][root][INFO] - wandb_key: ce53e10675102394f9c8ac9f89c76bcbf14ea805
+[2024-06-07 15:50:54,502][root][INFO] - wandb_account: z8086486
+[2024-06-07 15:51:09,430][root][INFO] - label_values: [[0, 0]]
+[2024-06-07 15:51:09,431][flwr][WARNING] - DEPRECATED FEATURE: flwr.client.start_numpy_client() is deprecated. 
+	Instead, use `flwr.client.start_client()` by ensuring you first call the `.to_client()` method as shown below: 
+	flwr.client.start_client(
+		server_address='<IP>:<PORT>',
+		client=FlowerClient().to_client(), # <-- where FlowerClient is of type flwr.client.NumPyClient object
+	)
+	Using `start_numpy_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+[2024-06-07 15:51:09,455][flwr][DEBUG] - Opened insecure gRPC connection (no certificates were passed)
+[2024-06-07 15:51:09,460][flwr][DEBUG] - ChannelConnectivity.IDLE
+[2024-06-07 15:51:09,461][flwr][DEBUG] - ChannelConnectivity.CONNECTING
+[2024-06-07 15:51:09,466][flwr][DEBUG] - ChannelConnectivity.READY
+[2024-06-07 15:51:09,491][flwr][INFO] - 
+[2024-06-07 15:51:09,491][flwr][INFO] - [RUN 0, ROUND ]
+[2024-06-07 15:51:09,491][flwr][INFO] - Received: train message 02bba01f-7cf3-46c2-a741-6f3d5fae15ab
+[2024-06-07 15:51:09,500][flwr][ERROR] - Client raised an exception.
+Traceback (most recent call last):
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/client/app.py", line 496, in _start_client_internal
+    reply_message = client_app(message=message, context=context)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/client/client_app.py", line 98, in __call__
+    return self._call(message, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/client/client_app.py", line 81, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/client/message_handler/message_handler.py", line 130, in handle_legacy_message_from_msgtype
+    fit_res = maybe_call_fit(
+              ^^^^^^^^^^^^^^^
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/client/client.py", line 234, in maybe_call_fit
+    return client.fit(fit_ins)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/client/numpy_client.py", line 238, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/fedops/client/client_fl.py", line 135, in fit
+    trained_model = self.train_torch(self.model, self.train_loader, self.val_loader, epochs)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: train_torch.<locals>.custom_train_torch() missing 1 required positional argument: 'cfg'
+[2024-06-07 15:51:09,670][flwr][DEBUG] - gRPC channel closed
+[2024-06-07 15:51:09,691][root][INFO] - notify_fail start
+[2024-06-07 15:51:09,710][root][ERROR] - trainFin
+[2024-06-07 15:51:47,149][root][INFO] - ccl-y-server;f0:2f:74:96:d6:64-client close

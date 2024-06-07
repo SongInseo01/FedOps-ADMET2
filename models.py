@@ -21,9 +21,11 @@ class SMILESModel(nn.Module):
         return out
 
 def train_torch():
-    def custom_train_torch(model, train_loader, epochs, cfg):
+    def custom_train_torch(model, train_loader, val_loader, epochs):
         criterion = nn.MSELoss()
-        optimizer = optim.Adam(model.parameters(), lr=cfg['lr'])
+        optimizer = optim.Adam(model.parameters(), lr=0.0001)
+        best_val_loss = float('inf')
+        best_model = model.state_dict()
 
         print("Starting training...")
         for epoch in range(epochs):
@@ -39,13 +41,31 @@ def train_torch():
 
             epoch_loss = running_loss / len(train_loader)
             print(f'Epoch {epoch+1}/{epochs}, Loss: {epoch_loss:.4f}')
+            
+            # Validation loop
+            val_loss = 0.0
+            model.eval()
+            with torch.no_grad():
+                for inputs, targets in val_loader:
+                    outputs = model(inputs)
+                    loss = criterion(outputs, targets.unsqueeze(1))
+                    val_loss += loss.item()
+            
+            val_loss /= len(val_loader)
+            print(f'Epoch {epoch+1}/{epochs}, Validation Loss: {val_loss:.4f}')
 
-        return model
+            # Save the best model
+            if val_loss < best_val_loss:
+                best_val_loss = val_loss
+                best_model = model.state_dict()
+
+            model.load_state_dict(best_model)
+        return model, best_val_loss
 
     return custom_train_torch
 
 def test_torch():
-    def custom_test_torch(model, test_loader, cfg):
+    def custom_test_torch(model, test_loader):
         criterion = nn.MSELoss()
         model.eval()
         test_losses = []

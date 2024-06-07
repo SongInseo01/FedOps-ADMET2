@@ -1,0 +1,247 @@
+2024-06-07 15:11:24,998 INFO    StreamThr :1883425 [internal.py:wandb_internal():86] W&B internal server running at pid: 1883425, started at: 2024-06-07 15:11:24.997223
+2024-06-07 15:11:25,010 DEBUG   HandlerThread:1883425 [handler.py:handle_request():146] handle_request: status
+2024-06-07 15:11:25,015 INFO    WriterThread:1883425 [datastore.py:open_for_write():85] open: /home/ccl/Desktop/isfolder/issrc/fedops/FedOps-ADMET2/wandb/run-20240607_151124-mfbq3rcx/run-mfbq3rcx.wandb
+2024-06-07 15:11:25,016 DEBUG   SenderThread:1883425 [sender.py:send():380] send: header
+2024-06-07 15:11:25,020 DEBUG   SenderThread:1883425 [sender.py:send():380] send: run
+2024-06-07 15:11:25,652 INFO    SenderThread:1883425 [dir_watcher.py:__init__():211] watching files in: /home/ccl/Desktop/isfolder/issrc/fedops/FedOps-ADMET2/wandb/run-20240607_151124-mfbq3rcx/files
+2024-06-07 15:11:25,652 INFO    SenderThread:1883425 [sender.py:_start_run_threads():1122] run started: mfbq3rcx with start time 1717740685.010815
+2024-06-07 15:11:25,666 DEBUG   HandlerThread:1883425 [handler.py:handle_request():146] handle_request: check_version
+2024-06-07 15:11:25,666 DEBUG   SenderThread:1883425 [sender.py:send_request():407] send_request: check_version
+2024-06-07 15:11:25,861 DEBUG   HandlerThread:1883425 [handler.py:handle_request():146] handle_request: run_start
+2024-06-07 15:11:25,901 DEBUG   HandlerThread:1883425 [system_info.py:__init__():32] System info init
+2024-06-07 15:11:25,901 DEBUG   HandlerThread:1883425 [system_info.py:__init__():47] System info init done
+2024-06-07 15:11:25,901 INFO    HandlerThread:1883425 [system_monitor.py:start():194] Starting system monitor
+2024-06-07 15:11:25,901 INFO    SystemMonitor:1883425 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-06-07 15:11:25,902 INFO    HandlerThread:1883425 [system_monitor.py:probe():214] Collecting system info
+2024-06-07 15:11:25,903 INFO    SystemMonitor:1883425 [interfaces.py:start():190] Started cpu monitoring
+2024-06-07 15:11:25,904 INFO    SystemMonitor:1883425 [interfaces.py:start():190] Started disk monitoring
+2024-06-07 15:11:25,905 INFO    SystemMonitor:1883425 [interfaces.py:start():190] Started gpu monitoring
+2024-06-07 15:11:25,906 INFO    SystemMonitor:1883425 [interfaces.py:start():190] Started memory monitoring
+2024-06-07 15:11:25,907 INFO    SystemMonitor:1883425 [interfaces.py:start():190] Started network monitoring
+2024-06-07 15:11:25,957 DEBUG   HandlerThread:1883425 [system_info.py:probe():196] Probing system
+2024-06-07 15:11:25,961 DEBUG   HandlerThread:1883425 [system_info.py:_probe_git():181] Probing git
+2024-06-07 15:11:25,968 DEBUG   HandlerThread:1883425 [system_info.py:_probe_git():189] Probing git done
+2024-06-07 15:11:25,968 DEBUG   HandlerThread:1883425 [system_info.py:probe():244] Probing system done
+2024-06-07 15:11:25,968 DEBUG   HandlerThread:1883425 [system_monitor.py:probe():223] {'os': 'Linux-5.15.0-102-generic-x86_64-with-glibc2.31', 'python': '3.11.5', 'heartbeatAt': '2024-06-07T06:11:25.957907', 'startedAt': '2024-06-07T06:11:24.990830', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': '/home/ccl/Desktop/isfolder/issrc/fedops/FedOps-ADMET2/client_main.py', 'codePathLocal': 'client_main.py', 'codePath': 'client_main.py', 'git': {'remote': 'https://github.com/SongInseo01/FedOps-ADMET2.git', 'commit': '47728d0cb0183e71f770d9071cb199f6c28e33af'}, 'email': 'z8086486@gachon.ac.kr', 'root': '/home/ccl/Desktop/isfolder/issrc/fedops/FedOps-ADMET2', 'host': 'ccl-y-server', 'username': 'ccl', 'executable': '/home/ccl/anaconda3/envs/isenv/bin/python', 'cpu_count': 18, 'cpu_count_logical': 36, 'cpu_freq': {'current': 3.022944444444444, 'min': 1200.0, 'max': 4633.333333333333}, 'cpu_freq_per_core': [{'current': 3.909, 'min': 1200.0, 'max': 4600.0}, {'current': 2.155, 'min': 1200.0, 'max': 4600.0}, {'current': 3.03, 'min': 1200.0, 'max': 4800.0}, {'current': 3.909, 'min': 1200.0, 'max': 4700.0}, {'current': 3.028, 'min': 1200.0, 'max': 4600.0}, {'current': 2.898, 'min': 1200.0, 'max': 4800.0}, {'current': 3.322, 'min': 1200.0, 'max': 4600.0}, {'current': 3.909, 'min': 1200.0, 'max': 4600.0}, {'current': 3.0, 'min': 1200.0, 'max': 4600.0}, {'current': 3.0, 'min': 1200.0, 'max': 4600.0}, {'current': 3.0, 'min': 1200.0, 'max': 4600.0}, {'current': 3.0, 'min': 1200.0, 'max': 4600.0}, {'current': 3.024, 'min': 1200.0, 'max': 4700.0}, {'current': 3.025, 'min': 1200.0, 'max': 4600.0}, {'current': 3.0, 'min': 1200.0, 'max': 4600.0}, {'current': 3.0, 'min': 1200.0, 'max': 4600.0}, {'current': 3.242, 'min': 1200.0, 'max': 4600.0}, {'current': 3.0, 'min': 1200.0, 'max': 4600.0}, {'current': 3.0, 'min': 1200.0, 'max': 4600.0}, {'current': 3.0, 'min': 1200.0, 'max': 4600.0}, {'current': 3.0, 'min': 1200.0, 'max': 4800.0}, {'current': 3.0, 'min': 1200.0, 'max': 4700.0}, {'current': 3.0, 'min': 1200.0, 'max': 4600.0}, {'current': 3.0, 'min': 1200.0, 'max': 4800.0}, {'current': 3.0, 'min': 1200.0, 'max': 4600.0}, {'current': 3.0, 'min': 1200.0, 'max': 4600.0}, {'current': 3.0, 'min': 1200.0, 'max': 4600.0}, {'current': 3.0, 'min': 1200.0, 'max': 4600.0}, {'current': 3.0, 'min': 1200.0, 'max': 4600.0}, {'current': 3.635, 'min': 1200.0, 'max': 4600.0}, {'current': 3.0, 'min': 1200.0, 'max': 4700.0}, {'current': 3.0, 'min': 1200.0, 'max': 4600.0}, {'current': 3.0, 'min': 1200.0, 'max': 4600.0}, {'current': 3.0, 'min': 1200.0, 'max': 4600.0}, {'current': 3.0, 'min': 1200.0, 'max': 4600.0}, {'current': 3.0, 'min': 1200.0, 'max': 4600.0}], 'disk': {'/': {'total': 1832.2072448730469, 'used': 474.58524322509766}}, 'gpu': 'NVIDIA GeForce RTX 3070 Ti', 'gpu_count': 2, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 3070 Ti', 'memory_total': 8589934592}, {'name': 'NVIDIA GeForce RTX 3070 Ti', 'memory_total': 8589934592}], 'memory': {'total': 125.4723892211914}}
+2024-06-07 15:11:25,968 INFO    HandlerThread:1883425 [system_monitor.py:probe():224] Finished collecting system info
+2024-06-07 15:11:25,968 INFO    HandlerThread:1883425 [system_monitor.py:probe():227] Publishing system info
+2024-06-07 15:11:25,968 DEBUG   HandlerThread:1883425 [system_info.py:_save_pip():52] Saving list of pip packages installed into the current environment
+2024-06-07 15:11:25,969 DEBUG   HandlerThread:1883425 [system_info.py:_save_pip():68] Saving pip packages done
+2024-06-07 15:11:25,969 DEBUG   HandlerThread:1883425 [system_info.py:_save_conda():75] Saving list of conda packages installed into the current environment
+2024-06-07 15:11:26,654 INFO    Thread-12 :1883425 [dir_watcher.py:_on_file_created():271] file/dir created: /home/ccl/Desktop/isfolder/issrc/fedops/FedOps-ADMET2/wandb/run-20240607_151124-mfbq3rcx/files/requirements.txt
+2024-06-07 15:11:26,655 INFO    Thread-12 :1883425 [dir_watcher.py:_on_file_created():271] file/dir created: /home/ccl/Desktop/isfolder/issrc/fedops/FedOps-ADMET2/wandb/run-20240607_151124-mfbq3rcx/files/conda-environment.yaml
+2024-06-07 15:11:38,233 DEBUG   HandlerThread:1883425 [system_info.py:_save_conda():87] Saving conda packages done
+2024-06-07 15:11:38,234 INFO    HandlerThread:1883425 [system_monitor.py:probe():229] Finished publishing system info
+2024-06-07 15:11:38,245 DEBUG   HandlerThread:1883425 [handler.py:handle_request():146] handle_request: status_report
+2024-06-07 15:11:38,245 DEBUG   HandlerThread:1883425 [handler.py:handle_request():146] handle_request: keepalive
+2024-06-07 15:11:38,246 DEBUG   HandlerThread:1883425 [handler.py:handle_request():146] handle_request: status_report
+2024-06-07 15:11:38,246 DEBUG   HandlerThread:1883425 [handler.py:handle_request():146] handle_request: keepalive
+2024-06-07 15:11:38,247 DEBUG   SenderThread:1883425 [sender.py:send():380] send: files
+2024-06-07 15:11:38,247 INFO    SenderThread:1883425 [sender.py:_save_file():1378] saving file wandb-metadata.json with policy now
+2024-06-07 15:11:38,258 DEBUG   HandlerThread:1883425 [handler.py:handle_request():146] handle_request: stop_status
+2024-06-07 15:11:38,259 DEBUG   SenderThread:1883425 [sender.py:send_request():407] send_request: stop_status
+2024-06-07 15:11:38,262 DEBUG   HandlerThread:1883425 [handler.py:handle_request():146] handle_request: internal_messages
+2024-06-07 15:11:38,656 INFO    Thread-12 :1883425 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ccl/Desktop/isfolder/issrc/fedops/FedOps-ADMET2/wandb/run-20240607_151124-mfbq3rcx/files/conda-environment.yaml
+2024-06-07 15:11:38,657 INFO    Thread-12 :1883425 [dir_watcher.py:_on_file_created():271] file/dir created: /home/ccl/Desktop/isfolder/issrc/fedops/FedOps-ADMET2/wandb/run-20240607_151124-mfbq3rcx/files/wandb-metadata.json
+2024-06-07 15:11:38,785 DEBUG   SenderThread:1883425 [sender.py:send():380] send: telemetry
+2024-06-07 15:11:39,319 INFO    wandb-upload_0:1883425 [upload_job.py:push():131] Uploaded file /tmp/tmpc8txujyawandb/pfohf8ry-wandb-metadata.json
+2024-06-07 15:11:39,657 INFO    Thread-12 :1883425 [dir_watcher.py:_on_file_created():271] file/dir created: /home/ccl/Desktop/isfolder/issrc/fedops/FedOps-ADMET2/wandb/run-20240607_151124-mfbq3rcx/files/output.log
+2024-06-07 15:11:41,658 INFO    Thread-12 :1883425 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ccl/Desktop/isfolder/issrc/fedops/FedOps-ADMET2/wandb/run-20240607_151124-mfbq3rcx/files/output.log
+2024-06-07 15:11:41,827 DEBUG   HandlerThread:1883425 [handler.py:handle_request():146] handle_request: status_report
+2024-06-07 15:11:45,659 INFO    Thread-12 :1883425 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ccl/Desktop/isfolder/issrc/fedops/FedOps-ADMET2/wandb/run-20240607_151124-mfbq3rcx/files/output.log
+2024-06-07 15:11:47,798 DEBUG   HandlerThread:1883425 [handler.py:handle_request():146] handle_request: status_report
+2024-06-07 15:11:53,258 DEBUG   HandlerThread:1883425 [handler.py:handle_request():146] handle_request: stop_status
+2024-06-07 15:11:53,258 DEBUG   HandlerThread:1883425 [handler.py:handle_request():146] handle_request: internal_messages
+2024-06-07 15:11:53,259 DEBUG   SenderThread:1883425 [sender.py:send_request():407] send_request: stop_status
+2024-06-07 15:11:53,579 DEBUG   HandlerThread:1883425 [handler.py:handle_request():146] handle_request: status_report
+2024-06-07 15:11:53,662 INFO    Thread-12 :1883425 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ccl/Desktop/isfolder/issrc/fedops/FedOps-ADMET2/wandb/run-20240607_151124-mfbq3rcx/files/output.log
+2024-06-07 15:11:58,842 DEBUG   HandlerThread:1883425 [handler.py:handle_request():146] handle_request: status_report
+2024-06-07 15:11:59,665 INFO    Thread-12 :1883425 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ccl/Desktop/isfolder/issrc/fedops/FedOps-ADMET2/wandb/run-20240607_151124-mfbq3rcx/files/output.log
+2024-06-07 15:11:59,665 INFO    Thread-12 :1883425 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ccl/Desktop/isfolder/issrc/fedops/FedOps-ADMET2/wandb/run-20240607_151124-mfbq3rcx/files/config.yaml
+2024-06-07 15:12:04,108 DEBUG   HandlerThread:1883425 [handler.py:handle_request():146] handle_request: status_report
+2024-06-07 15:12:05,667 INFO    Thread-12 :1883425 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ccl/Desktop/isfolder/issrc/fedops/FedOps-ADMET2/wandb/run-20240607_151124-mfbq3rcx/files/output.log
+2024-06-07 15:12:08,258 DEBUG   HandlerThread:1883425 [handler.py:handle_request():146] handle_request: stop_status
+2024-06-07 15:12:08,259 DEBUG   HandlerThread:1883425 [handler.py:handle_request():146] handle_request: internal_messages
+2024-06-07 15:12:08,259 DEBUG   SenderThread:1883425 [sender.py:send_request():407] send_request: stop_status
+2024-06-07 15:12:09,553 DEBUG   HandlerThread:1883425 [handler.py:handle_request():146] handle_request: status_report
+2024-06-07 15:12:13,670 INFO    Thread-12 :1883425 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ccl/Desktop/isfolder/issrc/fedops/FedOps-ADMET2/wandb/run-20240607_151124-mfbq3rcx/files/output.log
+2024-06-07 15:12:14,881 DEBUG   HandlerThread:1883425 [handler.py:handle_request():146] handle_request: status_report
+2024-06-07 15:12:19,673 INFO    Thread-12 :1883425 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ccl/Desktop/isfolder/issrc/fedops/FedOps-ADMET2/wandb/run-20240607_151124-mfbq3rcx/files/output.log
+2024-06-07 15:12:20,402 DEBUG   HandlerThread:1883425 [handler.py:handle_request():146] handle_request: status_report
+2024-06-07 15:12:23,258 DEBUG   HandlerThread:1883425 [handler.py:handle_request():146] handle_request: stop_status
+2024-06-07 15:12:23,259 DEBUG   SenderThread:1883425 [sender.py:send_request():407] send_request: stop_status
+2024-06-07 15:12:23,259 DEBUG   HandlerThread:1883425 [handler.py:handle_request():146] handle_request: internal_messages
+2024-06-07 15:12:25,676 INFO    Thread-12 :1883425 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ccl/Desktop/isfolder/issrc/fedops/FedOps-ADMET2/wandb/run-20240607_151124-mfbq3rcx/files/output.log
+2024-06-07 15:12:25,907 DEBUG   SystemMonitor:1883425 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-06-07 15:12:25,921 DEBUG   HandlerThread:1883425 [handler.py:handle_request():146] handle_request: status_report
+2024-06-07 15:12:25,924 DEBUG   SenderThread:1883425 [sender.py:send():380] send: stats
+2024-06-07 15:12:31,442 DEBUG   HandlerThread:1883425 [handler.py:handle_request():146] handle_request: status_report
+2024-06-07 15:12:31,678 INFO    Thread-12 :1883425 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ccl/Desktop/isfolder/issrc/fedops/FedOps-ADMET2/wandb/run-20240607_151124-mfbq3rcx/files/output.log
+2024-06-07 15:12:36,443 DEBUG   HandlerThread:1883425 [handler.py:handle_request():146] handle_request: status_report
+2024-06-07 15:12:38,259 DEBUG   HandlerThread:1883425 [handler.py:handle_request():146] handle_request: stop_status
+2024-06-07 15:12:38,259 DEBUG   HandlerThread:1883425 [handler.py:handle_request():146] handle_request: internal_messages
+2024-06-07 15:12:38,259 DEBUG   SenderThread:1883425 [sender.py:send_request():407] send_request: stop_status
+2024-06-07 15:12:39,682 INFO    Thread-12 :1883425 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ccl/Desktop/isfolder/issrc/fedops/FedOps-ADMET2/wandb/run-20240607_151124-mfbq3rcx/files/output.log
+2024-06-07 15:12:41,625 DEBUG   HandlerThread:1883425 [handler.py:handle_request():146] handle_request: status_report
+2024-06-07 15:12:45,684 INFO    Thread-12 :1883425 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ccl/Desktop/isfolder/issrc/fedops/FedOps-ADMET2/wandb/run-20240607_151124-mfbq3rcx/files/output.log
+2024-06-07 15:12:47,483 DEBUG   HandlerThread:1883425 [handler.py:handle_request():146] handle_request: status_report
+2024-06-07 15:12:51,687 INFO    Thread-12 :1883425 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ccl/Desktop/isfolder/issrc/fedops/FedOps-ADMET2/wandb/run-20240607_151124-mfbq3rcx/files/output.log
+2024-06-07 15:12:53,004 DEBUG   HandlerThread:1883425 [handler.py:handle_request():146] handle_request: status_report
+2024-06-07 15:12:53,259 DEBUG   HandlerThread:1883425 [handler.py:handle_request():146] handle_request: stop_status
+2024-06-07 15:12:53,259 DEBUG   HandlerThread:1883425 [handler.py:handle_request():146] handle_request: internal_messages
+2024-06-07 15:12:53,260 DEBUG   SenderThread:1883425 [sender.py:send_request():407] send_request: stop_status
+2024-06-07 15:12:55,910 DEBUG   SenderThread:1883425 [sender.py:send():380] send: stats
+2024-06-07 15:12:57,689 INFO    Thread-12 :1883425 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ccl/Desktop/isfolder/issrc/fedops/FedOps-ADMET2/wandb/run-20240607_151124-mfbq3rcx/files/output.log
+2024-06-07 15:12:58,522 DEBUG   HandlerThread:1883425 [handler.py:handle_request():146] handle_request: status_report
+2024-06-07 15:13:04,041 DEBUG   HandlerThread:1883425 [handler.py:handle_request():146] handle_request: status_report
+2024-06-07 15:13:05,693 INFO    Thread-12 :1883425 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ccl/Desktop/isfolder/issrc/fedops/FedOps-ADMET2/wandb/run-20240607_151124-mfbq3rcx/files/output.log
+2024-06-07 15:13:08,259 DEBUG   HandlerThread:1883425 [handler.py:handle_request():146] handle_request: stop_status
+2024-06-07 15:13:08,259 DEBUG   SenderThread:1883425 [sender.py:send_request():407] send_request: stop_status
+2024-06-07 15:13:08,262 DEBUG   HandlerThread:1883425 [handler.py:handle_request():146] handle_request: internal_messages
+2024-06-07 15:13:09,535 DEBUG   HandlerThread:1883425 [handler.py:handle_request():146] handle_request: status_report
+2024-06-07 15:13:11,695 INFO    Thread-12 :1883425 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ccl/Desktop/isfolder/issrc/fedops/FedOps-ADMET2/wandb/run-20240607_151124-mfbq3rcx/files/output.log
+2024-06-07 15:13:14,561 DEBUG   HandlerThread:1883425 [handler.py:handle_request():146] handle_request: status_report
+2024-06-07 15:13:17,698 INFO    Thread-12 :1883425 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ccl/Desktop/isfolder/issrc/fedops/FedOps-ADMET2/wandb/run-20240607_151124-mfbq3rcx/files/output.log
+2024-06-07 15:13:19,019 DEBUG   SenderThread:1883425 [sender.py:send():380] send: exit
+2024-06-07 15:13:19,019 INFO    SenderThread:1883425 [sender.py:send_exit():585] handling exit code: 0
+2024-06-07 15:13:19,020 INFO    SenderThread:1883425 [sender.py:send_exit():587] handling runtime: 113
+2024-06-07 15:13:19,020 INFO    SenderThread:1883425 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2024-06-07 15:13:19,021 INFO    SenderThread:1883425 [sender.py:send_exit():593] send defer
+2024-06-07 15:13:19,021 DEBUG   HandlerThread:1883425 [handler.py:handle_request():146] handle_request: defer
+2024-06-07 15:13:19,021 INFO    HandlerThread:1883425 [handler.py:handle_request_defer():172] handle defer: 0
+2024-06-07 15:13:19,021 DEBUG   SenderThread:1883425 [sender.py:send_request():407] send_request: defer
+2024-06-07 15:13:19,021 INFO    SenderThread:1883425 [sender.py:send_request_defer():609] handle sender defer: 0
+2024-06-07 15:13:19,021 INFO    SenderThread:1883425 [sender.py:transition_state():613] send defer: 1
+2024-06-07 15:13:19,022 DEBUG   HandlerThread:1883425 [handler.py:handle_request():146] handle_request: defer
+2024-06-07 15:13:19,022 INFO    HandlerThread:1883425 [handler.py:handle_request_defer():172] handle defer: 1
+2024-06-07 15:13:19,022 DEBUG   SenderThread:1883425 [sender.py:send_request():407] send_request: defer
+2024-06-07 15:13:19,022 INFO    SenderThread:1883425 [sender.py:send_request_defer():609] handle sender defer: 1
+2024-06-07 15:13:19,022 INFO    SenderThread:1883425 [sender.py:transition_state():613] send defer: 2
+2024-06-07 15:13:19,022 DEBUG   HandlerThread:1883425 [handler.py:handle_request():146] handle_request: defer
+2024-06-07 15:13:19,022 INFO    HandlerThread:1883425 [handler.py:handle_request_defer():172] handle defer: 2
+2024-06-07 15:13:19,022 INFO    HandlerThread:1883425 [system_monitor.py:finish():203] Stopping system monitor
+2024-06-07 15:13:19,023 DEBUG   SystemMonitor:1883425 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-06-07 15:13:19,023 INFO    HandlerThread:1883425 [interfaces.py:finish():202] Joined cpu monitor
+2024-06-07 15:13:19,023 DEBUG   SystemMonitor:1883425 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-06-07 15:13:19,023 INFO    HandlerThread:1883425 [interfaces.py:finish():202] Joined disk monitor
+2024-06-07 15:13:19,159 INFO    HandlerThread:1883425 [interfaces.py:finish():202] Joined gpu monitor
+2024-06-07 15:13:19,159 INFO    HandlerThread:1883425 [interfaces.py:finish():202] Joined memory monitor
+2024-06-07 15:13:19,159 INFO    HandlerThread:1883425 [interfaces.py:finish():202] Joined network monitor
+2024-06-07 15:13:19,160 DEBUG   SenderThread:1883425 [sender.py:send_request():407] send_request: defer
+2024-06-07 15:13:19,160 INFO    SenderThread:1883425 [sender.py:send_request_defer():609] handle sender defer: 2
+2024-06-07 15:13:19,160 INFO    SenderThread:1883425 [sender.py:transition_state():613] send defer: 3
+2024-06-07 15:13:19,160 DEBUG   SenderThread:1883425 [sender.py:send():380] send: stats
+2024-06-07 15:13:19,160 DEBUG   HandlerThread:1883425 [handler.py:handle_request():146] handle_request: defer
+2024-06-07 15:13:19,161 INFO    HandlerThread:1883425 [handler.py:handle_request_defer():172] handle defer: 3
+2024-06-07 15:13:19,161 DEBUG   SenderThread:1883425 [sender.py:send_request():407] send_request: defer
+2024-06-07 15:13:19,161 INFO    SenderThread:1883425 [sender.py:send_request_defer():609] handle sender defer: 3
+2024-06-07 15:13:19,161 INFO    SenderThread:1883425 [sender.py:transition_state():613] send defer: 4
+2024-06-07 15:13:19,161 DEBUG   HandlerThread:1883425 [handler.py:handle_request():146] handle_request: defer
+2024-06-07 15:13:19,161 INFO    HandlerThread:1883425 [handler.py:handle_request_defer():172] handle defer: 4
+2024-06-07 15:13:19,162 DEBUG   SenderThread:1883425 [sender.py:send_request():407] send_request: defer
+2024-06-07 15:13:19,162 INFO    SenderThread:1883425 [sender.py:send_request_defer():609] handle sender defer: 4
+2024-06-07 15:13:19,162 INFO    SenderThread:1883425 [sender.py:transition_state():613] send defer: 5
+2024-06-07 15:13:19,162 DEBUG   HandlerThread:1883425 [handler.py:handle_request():146] handle_request: defer
+2024-06-07 15:13:19,162 INFO    HandlerThread:1883425 [handler.py:handle_request_defer():172] handle defer: 5
+2024-06-07 15:13:19,162 DEBUG   SenderThread:1883425 [sender.py:send():380] send: summary
+2024-06-07 15:13:19,163 INFO    SenderThread:1883425 [sender.py:_save_file():1378] saving file wandb-summary.json with policy end
+2024-06-07 15:13:19,163 DEBUG   SenderThread:1883425 [sender.py:send_request():407] send_request: defer
+2024-06-07 15:13:19,163 INFO    SenderThread:1883425 [sender.py:send_request_defer():609] handle sender defer: 5
+2024-06-07 15:13:19,163 INFO    SenderThread:1883425 [sender.py:transition_state():613] send defer: 6
+2024-06-07 15:13:19,163 DEBUG   HandlerThread:1883425 [handler.py:handle_request():146] handle_request: defer
+2024-06-07 15:13:19,163 INFO    HandlerThread:1883425 [handler.py:handle_request_defer():172] handle defer: 6
+2024-06-07 15:13:19,164 DEBUG   SenderThread:1883425 [sender.py:send_request():407] send_request: defer
+2024-06-07 15:13:19,164 INFO    SenderThread:1883425 [sender.py:send_request_defer():609] handle sender defer: 6
+2024-06-07 15:13:19,164 INFO    SenderThread:1883425 [sender.py:transition_state():613] send defer: 7
+2024-06-07 15:13:19,164 DEBUG   HandlerThread:1883425 [handler.py:handle_request():146] handle_request: status_report
+2024-06-07 15:13:19,164 DEBUG   HandlerThread:1883425 [handler.py:handle_request():146] handle_request: defer
+2024-06-07 15:13:19,164 INFO    HandlerThread:1883425 [handler.py:handle_request_defer():172] handle defer: 7
+2024-06-07 15:13:19,164 DEBUG   SenderThread:1883425 [sender.py:send_request():407] send_request: defer
+2024-06-07 15:13:19,164 INFO    SenderThread:1883425 [sender.py:send_request_defer():609] handle sender defer: 7
+2024-06-07 15:13:19,698 INFO    Thread-12 :1883425 [dir_watcher.py:_on_file_created():271] file/dir created: /home/ccl/Desktop/isfolder/issrc/fedops/FedOps-ADMET2/wandb/run-20240607_151124-mfbq3rcx/files/wandb-summary.json
+2024-06-07 15:13:20,020 DEBUG   HandlerThread:1883425 [handler.py:handle_request():146] handle_request: poll_exit
+2024-06-07 15:13:20,884 INFO    SenderThread:1883425 [sender.py:transition_state():613] send defer: 8
+2024-06-07 15:13:20,884 DEBUG   SenderThread:1883425 [sender.py:send_request():407] send_request: poll_exit
+2024-06-07 15:13:20,884 DEBUG   HandlerThread:1883425 [handler.py:handle_request():146] handle_request: defer
+2024-06-07 15:13:20,884 INFO    HandlerThread:1883425 [handler.py:handle_request_defer():172] handle defer: 8
+2024-06-07 15:13:20,885 DEBUG   SenderThread:1883425 [sender.py:send_request():407] send_request: defer
+2024-06-07 15:13:20,885 INFO    SenderThread:1883425 [sender.py:send_request_defer():609] handle sender defer: 8
+2024-06-07 15:13:20,885 INFO    SenderThread:1883425 [job_builder.py:build():281] Attempting to build job artifact
+2024-06-07 15:13:20,885 INFO    SenderThread:1883425 [job_builder.py:_get_source_type():393] is repo sourced job
+2024-06-07 15:13:20,887 INFO    SenderThread:1883425 [job_builder.py:build():369] adding wandb-job metadata file
+2024-06-07 15:13:20,906 INFO    SenderThread:1883425 [sender.py:transition_state():613] send defer: 9
+2024-06-07 15:13:20,906 DEBUG   HandlerThread:1883425 [handler.py:handle_request():146] handle_request: defer
+2024-06-07 15:13:20,906 INFO    HandlerThread:1883425 [handler.py:handle_request_defer():172] handle defer: 9
+2024-06-07 15:13:20,906 DEBUG   SenderThread:1883425 [sender.py:send():380] send: artifact
+2024-06-07 15:13:21,021 DEBUG   HandlerThread:1883425 [handler.py:handle_request():146] handle_request: poll_exit
+2024-06-07 15:13:21,699 INFO    Thread-12 :1883425 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ccl/Desktop/isfolder/issrc/fedops/FedOps-ADMET2/wandb/run-20240607_151124-mfbq3rcx/files/output.log
+2024-06-07 15:13:22,534 INFO    wandb-upload_1:1883425 [upload_job.py:push():89] Uploaded file /home/ccl/.local/share/wandb/artifacts/staging/tmp74wys4f8
+2024-06-07 15:13:22,549 INFO    wandb-upload_0:1883425 [upload_job.py:push():89] Uploaded file /home/ccl/.local/share/wandb/artifacts/staging/tmpv93tx21z
+2024-06-07 15:13:23,839 INFO    SenderThread:1883425 [sender.py:send_artifact():1456] sent artifact job-https___github.com_SongInseo01_FedOps-ADMET2.git_client_main.py - {'id': 'QXJ0aWZhY3Q6ODYzMzgxNDQz', 'state': 'PENDING', 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjE4MzIyMTE3NA==', 'latestArtifact': None}}
+2024-06-07 15:13:23,839 DEBUG   SenderThread:1883425 [sender.py:send_request():407] send_request: defer
+2024-06-07 15:13:23,839 INFO    SenderThread:1883425 [sender.py:send_request_defer():609] handle sender defer: 9
+2024-06-07 15:13:23,839 INFO    SenderThread:1883425 [dir_watcher.py:finish():358] shutting down directory watcher
+2024-06-07 15:13:24,701 INFO    SenderThread:1883425 [dir_watcher.py:finish():388] scan: /home/ccl/Desktop/isfolder/issrc/fedops/FedOps-ADMET2/wandb/run-20240607_151124-mfbq3rcx/files
+2024-06-07 15:13:24,701 INFO    SenderThread:1883425 [dir_watcher.py:finish():402] scan save: /home/ccl/Desktop/isfolder/issrc/fedops/FedOps-ADMET2/wandb/run-20240607_151124-mfbq3rcx/files/wandb-metadata.json wandb-metadata.json
+2024-06-07 15:13:24,701 INFO    SenderThread:1883425 [dir_watcher.py:finish():402] scan save: /home/ccl/Desktop/isfolder/issrc/fedops/FedOps-ADMET2/wandb/run-20240607_151124-mfbq3rcx/files/requirements.txt requirements.txt
+2024-06-07 15:13:24,701 INFO    SenderThread:1883425 [dir_watcher.py:finish():402] scan save: /home/ccl/Desktop/isfolder/issrc/fedops/FedOps-ADMET2/wandb/run-20240607_151124-mfbq3rcx/files/output.log output.log
+2024-06-07 15:13:24,702 INFO    SenderThread:1883425 [dir_watcher.py:finish():402] scan save: /home/ccl/Desktop/isfolder/issrc/fedops/FedOps-ADMET2/wandb/run-20240607_151124-mfbq3rcx/files/wandb-summary.json wandb-summary.json
+2024-06-07 15:13:24,702 INFO    SenderThread:1883425 [dir_watcher.py:finish():402] scan save: /home/ccl/Desktop/isfolder/issrc/fedops/FedOps-ADMET2/wandb/run-20240607_151124-mfbq3rcx/files/config.yaml config.yaml
+2024-06-07 15:13:24,706 INFO    SenderThread:1883425 [dir_watcher.py:finish():402] scan save: /home/ccl/Desktop/isfolder/issrc/fedops/FedOps-ADMET2/wandb/run-20240607_151124-mfbq3rcx/files/conda-environment.yaml conda-environment.yaml
+2024-06-07 15:13:24,716 INFO    SenderThread:1883425 [sender.py:transition_state():613] send defer: 10
+2024-06-07 15:13:24,716 DEBUG   SenderThread:1883425 [sender.py:send_request():407] send_request: poll_exit
+2024-06-07 15:13:24,717 DEBUG   HandlerThread:1883425 [handler.py:handle_request():146] handle_request: defer
+2024-06-07 15:13:24,720 INFO    HandlerThread:1883425 [handler.py:handle_request_defer():172] handle defer: 10
+2024-06-07 15:13:24,721 DEBUG   SenderThread:1883425 [sender.py:send_request():407] send_request: defer
+2024-06-07 15:13:24,721 INFO    SenderThread:1883425 [sender.py:send_request_defer():609] handle sender defer: 10
+2024-06-07 15:13:24,721 INFO    SenderThread:1883425 [file_pusher.py:finish():175] shutting down file pusher
+2024-06-07 15:13:25,261 INFO    wandb-upload_1:1883425 [upload_job.py:push():131] Uploaded file /home/ccl/Desktop/isfolder/issrc/fedops/FedOps-ADMET2/wandb/run-20240607_151124-mfbq3rcx/files/output.log
+2024-06-07 15:13:25,263 INFO    wandb-upload_2:1883425 [upload_job.py:push():131] Uploaded file /home/ccl/Desktop/isfolder/issrc/fedops/FedOps-ADMET2/wandb/run-20240607_151124-mfbq3rcx/files/requirements.txt
+2024-06-07 15:13:25,457 INFO    wandb-upload_0:1883425 [upload_job.py:push():131] Uploaded file /home/ccl/Desktop/isfolder/issrc/fedops/FedOps-ADMET2/wandb/run-20240607_151124-mfbq3rcx/files/wandb-summary.json
+2024-06-07 15:13:25,468 INFO    wandb-upload_4:1883425 [upload_job.py:push():131] Uploaded file /home/ccl/Desktop/isfolder/issrc/fedops/FedOps-ADMET2/wandb/run-20240607_151124-mfbq3rcx/files/conda-environment.yaml
+2024-06-07 15:13:25,490 INFO    wandb-upload_3:1883425 [upload_job.py:push():131] Uploaded file /home/ccl/Desktop/isfolder/issrc/fedops/FedOps-ADMET2/wandb/run-20240607_151124-mfbq3rcx/files/config.yaml
+2024-06-07 15:13:25,690 INFO    Thread-11 (_thread_body):1883425 [sender.py:transition_state():613] send defer: 11
+2024-06-07 15:13:25,691 DEBUG   HandlerThread:1883425 [handler.py:handle_request():146] handle_request: defer
+2024-06-07 15:13:25,691 INFO    HandlerThread:1883425 [handler.py:handle_request_defer():172] handle defer: 11
+2024-06-07 15:13:25,692 DEBUG   SenderThread:1883425 [sender.py:send_request():407] send_request: defer
+2024-06-07 15:13:25,692 INFO    SenderThread:1883425 [sender.py:send_request_defer():609] handle sender defer: 11
+2024-06-07 15:13:25,692 INFO    SenderThread:1883425 [file_pusher.py:join():181] waiting for file pusher
+2024-06-07 15:13:25,692 INFO    SenderThread:1883425 [sender.py:transition_state():613] send defer: 12
+2024-06-07 15:13:25,692 DEBUG   HandlerThread:1883425 [handler.py:handle_request():146] handle_request: defer
+2024-06-07 15:13:25,692 INFO    HandlerThread:1883425 [handler.py:handle_request_defer():172] handle defer: 12
+2024-06-07 15:13:25,693 DEBUG   SenderThread:1883425 [sender.py:send_request():407] send_request: defer
+2024-06-07 15:13:25,693 INFO    SenderThread:1883425 [sender.py:send_request_defer():609] handle sender defer: 12
+2024-06-07 15:13:25,693 INFO    SenderThread:1883425 [file_stream.py:finish():595] file stream finish called
+2024-06-07 15:13:26,026 DEBUG   HandlerThread:1883425 [handler.py:handle_request():146] handle_request: keepalive
+2024-06-07 15:13:26,598 INFO    SenderThread:1883425 [file_stream.py:finish():599] file stream finish is done
+2024-06-07 15:13:26,599 INFO    SenderThread:1883425 [sender.py:transition_state():613] send defer: 13
+2024-06-07 15:13:26,599 DEBUG   HandlerThread:1883425 [handler.py:handle_request():146] handle_request: defer
+2024-06-07 15:13:26,599 INFO    HandlerThread:1883425 [handler.py:handle_request_defer():172] handle defer: 13
+2024-06-07 15:13:26,599 DEBUG   HandlerThread:1883425 [handler.py:handle_request():146] handle_request: status_report
+2024-06-07 15:13:26,600 DEBUG   SenderThread:1883425 [sender.py:send_request():407] send_request: defer
+2024-06-07 15:13:26,600 INFO    SenderThread:1883425 [sender.py:send_request_defer():609] handle sender defer: 13
+2024-06-07 15:13:26,600 INFO    SenderThread:1883425 [sender.py:transition_state():613] send defer: 14
+2024-06-07 15:13:26,600 DEBUG   HandlerThread:1883425 [handler.py:handle_request():146] handle_request: defer
+2024-06-07 15:13:26,600 INFO    HandlerThread:1883425 [handler.py:handle_request_defer():172] handle defer: 14
+2024-06-07 15:13:26,601 DEBUG   SenderThread:1883425 [sender.py:send():380] send: final
+2024-06-07 15:13:26,601 DEBUG   SenderThread:1883425 [sender.py:send():380] send: footer
+2024-06-07 15:13:26,601 DEBUG   SenderThread:1883425 [sender.py:send_request():407] send_request: defer
+2024-06-07 15:13:26,601 INFO    SenderThread:1883425 [sender.py:send_request_defer():609] handle sender defer: 14
+2024-06-07 15:13:26,602 DEBUG   HandlerThread:1883425 [handler.py:handle_request():146] handle_request: poll_exit
+2024-06-07 15:13:26,602 DEBUG   SenderThread:1883425 [sender.py:send_request():407] send_request: poll_exit
+2024-06-07 15:13:26,602 DEBUG   HandlerThread:1883425 [handler.py:handle_request():146] handle_request: server_info
+2024-06-07 15:13:26,603 DEBUG   SenderThread:1883425 [sender.py:send_request():407] send_request: server_info
+2024-06-07 15:13:26,606 DEBUG   HandlerThread:1883425 [handler.py:handle_request():146] handle_request: get_summary
+2024-06-07 15:13:26,606 DEBUG   HandlerThread:1883425 [handler.py:handle_request():146] handle_request: sampled_history
+2024-06-07 15:13:26,607 DEBUG   HandlerThread:1883425 [handler.py:handle_request():146] handle_request: internal_messages
+2024-06-07 15:13:26,607 DEBUG   HandlerThread:1883425 [handler.py:handle_request():146] handle_request: job_info
+2024-06-07 15:13:26,796 DEBUG   SenderThread:1883425 [sender.py:send_request():407] send_request: job_info
+2024-06-07 15:13:26,797 INFO    MainThread:1883425 [wandb_run.py:_footer_history_summary_info():3599] rendering history
+2024-06-07 15:13:26,797 INFO    MainThread:1883425 [wandb_run.py:_footer_history_summary_info():3631] rendering summary
+2024-06-07 15:13:26,797 INFO    MainThread:1883425 [wandb_run.py:_footer_sync_info():3558] logging synced files
+2024-06-07 15:13:26,798 DEBUG   HandlerThread:1883425 [handler.py:handle_request():146] handle_request: shutdown
+2024-06-07 15:13:26,798 INFO    HandlerThread:1883425 [handler.py:finish():866] shutting down handler
+2024-06-07 15:13:27,608 INFO    WriterThread:1883425 [datastore.py:close():294] close: /home/ccl/Desktop/isfolder/issrc/fedops/FedOps-ADMET2/wandb/run-20240607_151124-mfbq3rcx/run-mfbq3rcx.wandb
+2024-06-07 15:13:27,797 INFO    SenderThread:1883425 [sender.py:finish():1534] shutting down sender
+2024-06-07 15:13:27,797 INFO    SenderThread:1883425 [file_pusher.py:finish():175] shutting down file pusher
+2024-06-07 15:13:27,797 INFO    SenderThread:1883425 [file_pusher.py:join():181] waiting for file pusher

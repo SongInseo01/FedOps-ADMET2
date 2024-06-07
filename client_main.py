@@ -37,7 +37,8 @@ def main(cfg: DictConfig) -> None:
                                                                         validation_split=cfg.dataset.validation_split, 
                                                                         batch_size=cfg.batch_size) 
     
-    y_label_counter = 1
+    y_label_counter = {i: 0 for i in range(cfg.model.output_size)}
+
 
     logger.info('data loaded')
 
@@ -68,11 +69,14 @@ def main(cfg: DictConfig) -> None:
         "train_loader" : train_loader,
         "val_loader" : val_loader,
         "test_loader" : test_loader,
-        "y_label_counter" : y_label_counter,
+        
         "model" : model,
         "model_name" : model_name,
         "train_torch" : train_torch,
-        "test_torch" : test_torch
+        "test_torch" : test_torch,
+        "y_label_counter" : y_label_counter,
+        "epochs": cfg.num_epochs,
+        "cfg": cfg
     }
     
     

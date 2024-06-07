@@ -1,0 +1,232 @@
+{
+    "os": "Linux-5.15.0-102-generic-x86_64-with-glibc2.31",
+    "python": "3.11.5",
+    "heartbeatAt": "2024-06-07T06:11:25.957907",
+    "startedAt": "2024-06-07T06:11:24.990830",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "/home/ccl/Desktop/isfolder/issrc/fedops/FedOps-ADMET2/client_main.py",
+    "codePathLocal": "client_main.py",
+    "codePath": "client_main.py",
+    "git": {
+        "remote": "https://github.com/SongInseo01/FedOps-ADMET2.git",
+        "commit": "47728d0cb0183e71f770d9071cb199f6c28e33af"
+    },
+    "email": "z8086486@gachon.ac.kr",
+    "root": "/home/ccl/Desktop/isfolder/issrc/fedops/FedOps-ADMET2",
+    "host": "ccl-y-server",
+    "username": "ccl",
+    "executable": "/home/ccl/anaconda3/envs/isenv/bin/python",
+    "cpu_count": 18,
+    "cpu_count_logical": 36,
+    "cpu_freq": {
+        "current": 3.022944444444444,
+        "min": 1200.0,
+        "max": 4633.333333333333
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 3.909,
+            "min": 1200.0,
+            "max": 4600.0
+        },
+        {
+            "current": 2.155,
+            "min": 1200.0,
+            "max": 4600.0
+        },
+        {
+            "current": 3.03,
+            "min": 1200.0,
+            "max": 4800.0
+        },
+        {
+            "current": 3.909,
+            "min": 1200.0,
+            "max": 4700.0
+        },
+        {
+            "current": 3.028,
+            "min": 1200.0,
+            "max": 4600.0
+        },
+        {
+            "current": 2.898,
+            "min": 1200.0,
+            "max": 4800.0
+        },
+        {
+            "current": 3.322,
+            "min": 1200.0,
+            "max": 4600.0
+        },
+        {
+            "current": 3.909,
+            "min": 1200.0,
+            "max": 4600.0
+        },
+        {
+            "current": 3.0,
+            "min": 1200.0,
+            "max": 4600.0
+        },
+        {
+            "current": 3.0,
+            "min": 1200.0,
+            "max": 4600.0
+        },
+        {
+            "current": 3.0,
+            "min": 1200.0,
+            "max": 4600.0
+        },
+        {
+            "current": 3.0,
+            "min": 1200.0,
+            "max": 4600.0
+        },
+        {
+            "current": 3.024,
+            "min": 1200.0,
+            "max": 4700.0
+        },
+        {
+            "current": 3.025,
+            "min": 1200.0,
+            "max": 4600.0
+        },
+        {
+            "current": 3.0,
+            "min": 1200.0,
+            "max": 4600.0
+        },
+        {
+            "current": 3.0,
+            "min": 1200.0,
+            "max": 4600.0
+        },
+        {
+            "current": 3.242,
+            "min": 1200.0,
+            "max": 4600.0
+        },
+        {
+            "current": 3.0,
+            "min": 1200.0,
+            "max": 4600.0
+        },
+        {
+            "current": 3.0,
+            "min": 1200.0,
+            "max": 4600.0
+        },
+        {
+            "current": 3.0,
+            "min": 1200.0,
+            "max": 4600.0
+        },
+        {
+            "current": 3.0,
+            "min": 1200.0,
+            "max": 4800.0
+        },
+        {
+            "current": 3.0,
+            "min": 1200.0,
+            "max": 4700.0
+        },
+        {
+            "current": 3.0,
+            "min": 1200.0,
+            "max": 4600.0
+        },
+        {
+            "current": 3.0,
+            "min": 1200.0,
+            "max": 4800.0
+        },
+        {
+            "current": 3.0,
+            "min": 1200.0,
+            "max": 4600.0
+        },
+        {
+            "current": 3.0,
+            "min": 1200.0,
+            "max": 4600.0
+        },
+        {
+            "current": 3.0,
+            "min": 1200.0,
+            "max": 4600.0
+        },
+        {
+            "current": 3.0,
+            "min": 1200.0,
+            "max": 4600.0
+        },
+        {
+            "current": 3.0,
+            "min": 1200.0,
+            "max": 4600.0
+        },
+        {
+            "current": 3.635,
+            "min": 1200.0,
+            "max": 4600.0
+        },
+        {
+            "current": 3.0,
+            "min": 1200.0,
+            "max": 4700.0
+        },
+        {
+            "current": 3.0,
+            "min": 1200.0,
+            "max": 4600.0
+        },
+        {
+            "current": 3.0,
+            "min": 1200.0,
+            "max": 4600.0
+        },
+        {
+            "current": 3.0,
+            "min": 1200.0,
+            "max": 4600.0
+        },
+        {
+            "current": 3.0,
+            "min": 1200.0,
+            "max": 4600.0
+        },
+        {
+            "current": 3.0,
+            "min": 1200.0,
+            "max": 4600.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 1832.2072448730469,
+            "used": 474.58524322509766
+        }
+    },
+    "gpu": "NVIDIA GeForce RTX 3070 Ti",
+    "gpu_count": 2,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce RTX 3070 Ti",
+            "memory_total": 8589934592
+        },
+        {
+            "name": "NVIDIA GeForce RTX 3070 Ti",
+            "memory_total": 8589934592
+        }
+    ],
+    "memory": {
+        "total": 125.4723892211914
+    }
+}

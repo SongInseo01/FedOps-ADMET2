@@ -1,0 +1,402 @@
+[2024-06-07 15:46:16,526][root][INFO] - label_values: [[0, 0]]
+[2024-06-07 15:46:16,526][flwr][WARNING] - DEPRECATED FEATURE: flwr.client.start_numpy_client() is deprecated.
+	Instead, use `flwr.client.start_client()` by ensuring you first call the `.to_client()` method as shown below:
+	flwr.client.start_client(
+		server_address='<IP>:<PORT>',
+		client=FlowerClient().to_client(), # <-- where FlowerClient is of type flwr.client.NumPyClient object
+	)
+	Using `start_numpy_client()` is deprecated.
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+[32mINFO[39m:     127.0.0.1:46294 - "[1mGET /online HTTP/1.1[22m" [32m200 OK
+[2024-06-07 15:46:16,538][flwr][DEBUG] - Opened insecure gRPC connection (no certificates were passed)
+[2024-06-07 15:46:16,540][flwr][DEBUG] - ChannelConnectivity.IDLE
+[2024-06-07 15:46:16,541][flwr][DEBUG] - ChannelConnectivity.CONNECTING
+[2024-06-07 15:46:16,545][flwr][DEBUG] - ChannelConnectivity.READY
+[2024-06-07 15:46:16,560][flwr][INFO] -
+[2024-06-07 15:46:16,561][flwr][INFO] - [RUN 0, ROUND ]
+[2024-06-07 15:46:16,561][flwr][INFO] - Received: train message 785a4f03-2b5b-4b74-ba84-675a1a258513
+config: {'batch_size': 128, 'local_epochs': 5, 'num_rounds': 5}
+[2024-06-07 15:46:16,567][flwr][ERROR] - Client raised an exception.
+Traceback (most recent call last):
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/client/app.py", line 496, in _start_client_internal
+    reply_message = client_app(message=message, context=context)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/client/client_app.py", line 98, in __call__
+    return self._call(message, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/client/client_app.py", line 81, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/client/message_handler/message_handler.py", line 130, in handle_legacy_message_from_msgtype
+    fit_res = maybe_call_fit(
+              ^^^^^^^^^^^^^^^
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/client/client.py", line 234, in maybe_call_fit
+    return client.fit(fit_ins)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/client/numpy_client.py", line 238, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/fedops/client/client_fl.py", line 135, in fit
+    trained_model = self.train_torch(self.model, self.train_loader, self.val_loader, epochs)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: train_torch.<locals>.custom_train_torch() missing 1 required positional argument: 'cfg'
+[2024-06-07 15:46:16,750][flwr][DEBUG] - gRPC channel closed
+[2024-06-07 15:46:16,780][root][INFO] - notify_fail start
+[2024-06-07 15:46:16,801][root][ERROR] - trainFin
+[93mWARNING [39m:   DEPRECATED FEATURE: flwr.client.start_numpy_client() is deprecated.
+	Instead, use `flwr.client.start_client()` by ensuring you first call the `.to_client()` method as shown below:
+	flwr.client.start_client(
+		server_address='<IP>:<PORT>',
+		client=FlowerClient().to_client(), # <-- where FlowerClient is of type flwr.client.NumPyClient object
+	)
+	Using `start_numpy_client()` is deprecated.
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+[92mINFO [39m:
+[92mINFO [39m:      [RUN 0, ROUND ]
+[92mINFO [39m:      Received: train message 785a4f03-2b5b-4b74-ba84-675a1a258513
+[91mERROR [39m:     Client raised an exception.
+Traceback (most recent call last):
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/client/app.py", line 496, in _start_client_internal
+    reply_message = client_app(message=message, context=context)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/client/client_app.py", line 98, in __call__
+    return self._call(message, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/client/client_app.py", line 81, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/client/message_handler/message_handler.py", line 130, in handle_legacy_message_from_msgtype
+    fit_res = maybe_call_fit(
+              ^^^^^^^^^^^^^^^
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/client/client.py", line 234, in maybe_call_fit
+    return client.fit(fit_ins)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/client/numpy_client.py", line 238, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/fedops/client/client_fl.py", line 135, in fit
+    trained_model = self.train_torch(self.model, self.train_loader, self.val_loader, epochs)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: train_torch.<locals>.custom_train_torch() missing 1 required positional argument: 'cfg'
+--- Logging error ---
+Traceback (most recent call last):
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/fedops/client/app.py", line 123, in fl_client_start
+    await loop.run_in_executor(None, client_start)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/client/app.py", line 643, in start_numpy_client
+    start_client(
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/client/app.py", line 291, in start_client
+    _start_client_internal(
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/client/app.py", line 503, in _start_client_internal
+    raise ex
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/client/app.py", line 496, in _start_client_internal
+    reply_message = client_app(message=message, context=context)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/client/client_app.py", line 98, in __call__
+    return self._call(message, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/client/client_app.py", line 81, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/client/message_handler/message_handler.py", line 130, in handle_legacy_message_from_msgtype
+    fit_res = maybe_call_fit(
+              ^^^^^^^^^^^^^^^
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/client/client.py", line 234, in maybe_call_fit
+    return client.fit(fit_ins)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/client/numpy_client.py", line 238, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/fedops/client/client_fl.py", line 135, in fit
+    trained_model = self.train_torch(self.model, self.train_loader, self.val_loader, epochs)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: train_torch.<locals>.custom_train_torch() missing 1 required positional argument: 'cfg'
+During handling of the above exception, another exception occurred:
+Traceback (most recent call last):
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/logging/__init__.py", line 1110, in emit
+    msg = self.format(record)
+          ^^^^^^^^^^^^^^^^^^^
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/logging/__init__.py", line 953, in format
+    return fmt.format(record)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/logging/__init__.py", line 687, in format
+    record.message = record.getMessage()
+                     ^^^^^^^^^^^^^^^^^^^
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/logging/__init__.py", line 377, in getMessage
+    msg = msg % self.args
+          ~~~~^~~~~~~~~~~
+TypeError: not all arguments converted during string formatting
+Call stack:
+  File "/home/ccl/Desktop/isfolder/issrc/fedops/FedOps-ADMET2/client_main.py", line 87, in <module>
+    main()
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/hydra/main.py", line 94, in decorated_main
+    _run_hydra(
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/hydra/_internal/utils.py", line 394, in _run_hydra
+    _run_app(
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/hydra/_internal/utils.py", line 457, in _run_app
+    run_and_report(
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/hydra/_internal/utils.py", line 220, in run_and_report
+    return func()
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/hydra/_internal/utils.py", line 458, in <lambda>
+    lambda: hydra.run(
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/hydra/_internal/hydra.py", line 119, in run
+    ret = run_job(
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/hydra/core/utils.py", line 186, in run_job
+    ret.return_value = task_function(task_cfg)
+  File "/home/ccl/Desktop/isfolder/issrc/fedops/FedOps-ADMET2/client_main.py", line 83, in main
+    fl_client.start()
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/fedops/client/app.py", line 202, in start
+    uvicorn.run(self.app, host='0.0.0.0', port=self.client_port)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/uvicorn/main.py", line 587, in run
+    server.run()
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/uvicorn/server.py", line 61, in run
+    return asyncio.run(self.serve(sockets=sockets))
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/asyncio/runners.py", line 190, in run
+    return runner.run(main)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/uvicorn/protocols/http/httptools_impl.py", line 426, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/uvicorn/middleware/proxy_headers.py", line 84, in __call__
+    return await self.app(scope, receive, send)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/starlette/applications.py", line 116, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/starlette/_exception_handler.py", line 44, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/starlette/routing.py", line 746, in __call__
+    await route.handle(scope, receive, send)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/starlette/routing.py", line 75, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/starlette/_exception_handler.py", line 44, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/starlette/routing.py", line 73, in app
+    await response(scope, receive, send)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/starlette/responses.py", line 156, in __call__
+    await self.background()
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/starlette/background.py", line 43, in __call__
+    await task()
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/starlette/background.py", line 26, in __call__
+    await self.func(*self.args, **self.kwargs)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/fedops/client/app.py", line 159, in fl_client_start
+    logging.info('[E][PC0002] learning', e)
+Message: '[E][PC0002] learning'
+Arguments: (TypeError("train_torch.<locals>.custom_train_torch() missing 1 required positional argument: 'cfg'"),)
+--- Logging error ---
+Traceback (most recent call last):
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/fedops/client/app.py", line 123, in fl_client_start
+    await loop.run_in_executor(None, client_start)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/client/app.py", line 643, in start_numpy_client
+    start_client(
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/client/app.py", line 291, in start_client
+    _start_client_internal(
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/client/app.py", line 503, in _start_client_internal
+    raise ex
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/client/app.py", line 496, in _start_client_internal
+    reply_message = client_app(message=message, context=context)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/client/client_app.py", line 98, in __call__
+    return self._call(message, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/client/client_app.py", line 81, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/client/message_handler/message_handler.py", line 130, in handle_legacy_message_from_msgtype
+    fit_res = maybe_call_fit(
+              ^^^^^^^^^^^^^^^
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/client/client.py", line 234, in maybe_call_fit
+    return client.fit(fit_ins)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/client/numpy_client.py", line 238, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/fedops/client/client_fl.py", line 135, in fit
+    trained_model = self.train_torch(self.model, self.train_loader, self.val_loader, epochs)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: train_torch.<locals>.custom_train_torch() missing 1 required positional argument: 'cfg'
+During handling of the above exception, another exception occurred:
+Traceback (most recent call last):
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/logging/__init__.py", line 1110, in emit
+    msg = self.format(record)
+          ^^^^^^^^^^^^^^^^^^^
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/logging/__init__.py", line 953, in format
+    return fmt.format(record)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/logging/__init__.py", line 687, in format
+    record.message = record.getMessage()
+                     ^^^^^^^^^^^^^^^^^^^
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/logging/__init__.py", line 377, in getMessage
+    msg = msg % self.args
+          ~~~~^~~~~~~~~~~
+TypeError: not all arguments converted during string formatting
+Call stack:
+  File "/home/ccl/Desktop/isfolder/issrc/fedops/FedOps-ADMET2/client_main.py", line 87, in <module>
+    main()
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/hydra/main.py", line 94, in decorated_main
+    _run_hydra(
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/hydra/_internal/utils.py", line 394, in _run_hydra
+    _run_app(
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/hydra/_internal/utils.py", line 457, in _run_app
+    run_and_report(
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/hydra/_internal/utils.py", line 220, in run_and_report
+    return func()
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/hydra/_internal/utils.py", line 458, in <lambda>
+    lambda: hydra.run(
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/hydra/_internal/hydra.py", line 119, in run
+    ret = run_job(
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/hydra/core/utils.py", line 186, in run_job
+    ret.return_value = task_function(task_cfg)
+  File "/home/ccl/Desktop/isfolder/issrc/fedops/FedOps-ADMET2/client_main.py", line 83, in main
+    fl_client.start()
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/fedops/client/app.py", line 202, in start
+    uvicorn.run(self.app, host='0.0.0.0', port=self.client_port)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/uvicorn/main.py", line 587, in run
+    server.run()
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/uvicorn/server.py", line 61, in run
+    return asyncio.run(self.serve(sockets=sockets))
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/asyncio/runners.py", line 190, in run
+    return runner.run(main)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/uvicorn/protocols/http/httptools_impl.py", line 426, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/uvicorn/middleware/proxy_headers.py", line 84, in __call__
+    return await self.app(scope, receive, send)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/starlette/applications.py", line 116, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/starlette/_exception_handler.py", line 44, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/starlette/routing.py", line 746, in __call__
+    await route.handle(scope, receive, send)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/starlette/routing.py", line 75, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/starlette/_exception_handler.py", line 44, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/starlette/routing.py", line 73, in app
+    await response(scope, receive, send)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/starlette/responses.py", line 156, in __call__
+    await self.background()
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/starlette/background.py", line 43, in __call__
+    await task()
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/starlette/background.py", line 26, in __call__
+    await self.func(*self.args, **self.kwargs)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/fedops/client/app.py", line 159, in fl_client_start
+    logging.info('[E][PC0002] learning', e)
+Message: '[E][PC0002] learning'
+Arguments: (TypeError("train_torch.<locals>.custom_train_torch() missing 1 required positional argument: 'cfg'"),)
+[31mERROR[39m:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/uvicorn/protocols/http/httptools_impl.py", line 426, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/uvicorn/middleware/proxy_headers.py", line 84, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/fastapi/applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/starlette/applications.py", line 116, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/starlette/_exception_handler.py", line 55, in wrapped_app
+    raise exc
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/starlette/_exception_handler.py", line 44, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/starlette/routing.py", line 746, in __call__
+    await route.handle(scope, receive, send)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/starlette/routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/starlette/routing.py", line 75, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/starlette/_exception_handler.py", line 55, in wrapped_app
+    raise exc
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/starlette/_exception_handler.py", line 44, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/starlette/routing.py", line 73, in app
+    await response(scope, receive, send)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/starlette/responses.py", line 156, in __call__
+    await self.background()
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/starlette/background.py", line 43, in __call__
+    await task()
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/starlette/background.py", line 26, in __call__
+    await self.func(*self.args, **self.kwargs)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/fedops/client/app.py", line 162, in fl_client_start
+    raise e
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/fedops/client/app.py", line 123, in fl_client_start
+    await loop.run_in_executor(None, client_start)
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/client/app.py", line 643, in start_numpy_client
+    start_client(
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/client/app.py", line 291, in start_client
+    _start_client_internal(
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/client/app.py", line 503, in _start_client_internal
+    raise ex
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/client/app.py", line 496, in _start_client_internal
+    reply_message = client_app(message=message, context=context)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/client/client_app.py", line 98, in __call__
+    return self._call(message, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/client/client_app.py", line 81, in ffn
+    out_message = handle_legacy_message_from_msgtype(
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/client/message_handler/message_handler.py", line 130, in handle_legacy_message_from_msgtype
+    fit_res = maybe_call_fit(
+              ^^^^^^^^^^^^^^^
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/client/client.py", line 234, in maybe_call_fit
+    return client.fit(fit_ins)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/flwr/client/numpy_client.py", line 238, in _fit
+    results = self.numpy_client.fit(parameters, ins.config)  # type: ignore
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ccl/anaconda3/envs/isenv/lib/python3.11/site-packages/fedops/client/client_fl.py", line 135, in fit
+    trained_model = self.train_torch(self.model, self.train_loader, self.val_loader, epochs)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: train_torch.<locals>.custom_train_torch() missing 1 required positional argument: 'cfg'
+[32mINFO[39m:     127.0.0.1:37554 - "[1mGET /online HTTP/1.1[22m" [32m200 OK
+[32mINFO[39m:     127.0.0.1:37560 - "[1mGET /online HTTP/1.1[22m" [32m200 OK
+[32mINFO[39m:     127.0.0.1:50612 - "[1mGET /online HTTP/1.1[22m" [32m200 OK
+[32mINFO[39m:     127.0.0.1:60376 - "[1mGET /online HTTP/1.1[22m" [32m200 OK
+[32mINFO[39m:     127.0.0.1:60388 - "[1mGET /online HTTP/1.1[22m" [32m200 OK
+[32mINFO[39m:     127.0.0.1:42112 - "[1mGET /online HTTP/1.1[22m" [32m200 OK
+[32mINFO[39m:     127.0.0.1:36972 - "[1mGET /online HTTP/1.1[22m" [32m200 OK
+[32mINFO[39m:     127.0.0.1:36974 - "[1mGET /online HTTP/1.1[22m" [32m200 OK
+[32mINFO[39m:     127.0.0.1:40752 - "[1mGET /online HTTP/1.1[22m" [32m200 OK
+[32mINFO[39m:     127.0.0.1:58412 - "[1mGET /online HTTP/1.1[22m" [32m200 OK
+[32mINFO[39m:     127.0.0.1:58420 - "[1mGET /online HTTP/1.1[22m" [32m200 OK
+[32mINFO[39m:     127.0.0.1:46136 - "[1mGET /online HTTP/1.1[22m" [32m200 OK
+[32mINFO[39m:     127.0.0.1:55474 - "[1mGET /online HTTP/1.1[22m" [32m200 OK
+[32mINFO[39m:     127.0.0.1:55490 - "[1mGET /online HTTP/1.1[22m" [32m200 OK
+[2024-06-07 15:47:46,849][root][INFO] - ccl-y-server;f0:2f:74:96:d6:64-client close
+[32mINFO[39m:     Shutting down
+[32mINFO[39m:     Waiting for application shutdown.
+[32mINFO[39m:     Application shutdown complete.
+[32mINFO[39m:     Finished server process [[36m1931475[39m]
