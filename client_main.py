@@ -35,7 +35,8 @@ def main(cfg: DictConfig) -> None:
     """
     train_loader, val_loader, test_loader, y_label_counter = data_preparation.load_partition(dataset=cfg.dataset.name, 
                                                                         validation_split=cfg.dataset.validation_split, 
-                                                                        batch_size=cfg.batch_size) 
+                                                                        batch_size=cfg.batch_size,
+                                                                        label_count=cfg.model.output_size) 
     
     logger.info('data loaded')
 
