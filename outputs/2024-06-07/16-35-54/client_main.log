@@ -1,0 +1,92 @@
+[2024-06-07 16:35:54,154][__main__][INFO] - data loaded
+[2024-06-07 16:35:54,173][__main__][INFO] - Latest Local Model download
+[2024-06-07 16:35:54,173][root][INFO] - downloaded local_model_name: SMILESModel_local_model_V1.pth
+[2024-06-07 16:35:54,175][root][INFO] - init model_type: Pytorch
+[2024-06-07 16:38:33,572][root][INFO] - bulid model
+[2024-06-07 16:38:33,572][root][INFO] - FL start
+[2024-06-07 16:38:33,581][fedops.client.client_api][INFO] - FL_server_IP:port - ccl.gachon.ac.kr:40021
+[2024-06-07 16:38:33,582][root][INFO] - FL learning ready
+[2024-06-07 16:38:33,583][root][INFO] - fl_task_id: admet2
+[2024-06-07 16:38:33,583][root][INFO] - dataset: carboxylic
+[2024-06-07 16:38:33,583][root][INFO] - output_size: 1
+[2024-06-07 16:38:33,583][root][INFO] - validation_split: 0.2
+[2024-06-07 16:38:33,583][root][INFO] - model_type: Pytorch
+[2024-06-07 16:38:33,583][root][INFO] - wandb_key: ce53e10675102394f9c8ac9f89c76bcbf14ea805
+[2024-06-07 16:38:33,583][root][INFO] - wandb_account: z8086486
+[2024-06-07 16:38:47,313][root][INFO] - label_values: [[0, 0]]
+[2024-06-07 16:38:47,313][flwr][WARNING] - DEPRECATED FEATURE: flwr.client.start_numpy_client() is deprecated. 
+	Instead, use `flwr.client.start_client()` by ensuring you first call the `.to_client()` method as shown below: 
+	flwr.client.start_client(
+		server_address='<IP>:<PORT>',
+		client=FlowerClient().to_client(), # <-- where FlowerClient is of type flwr.client.NumPyClient object
+	)
+	Using `start_numpy_client()` is deprecated.
+
+            This is a deprecated feature. It will be removed
+            entirely in future versions of Flower.
+        
+[2024-06-07 16:38:47,328][flwr][DEBUG] - Opened insecure gRPC connection (no certificates were passed)
+[2024-06-07 16:38:47,332][flwr][DEBUG] - ChannelConnectivity.IDLE
+[2024-06-07 16:38:47,333][flwr][DEBUG] - ChannelConnectivity.CONNECTING
+[2024-06-07 16:38:47,338][flwr][DEBUG] - ChannelConnectivity.READY
+[2024-06-07 16:38:47,405][flwr][INFO] - 
+[2024-06-07 16:38:47,406][flwr][INFO] - [RUN 0, ROUND ]
+[2024-06-07 16:38:47,406][flwr][INFO] - Received: train message 5ce69ef7-f67f-4355-b094-0f98db263f1c
+[2024-06-07 16:38:47,764][fedops.client.client_fl][INFO] - train_performance - {"fl_task_id": "admet2", "client_mac": "f0:2f:74:96:d6:64", "client_name": "ccl-y-server", "round": 1, "gl_model_v": 1, "train_loss": 14.299929141998291, "train_accuracy": 0.0, "val_loss": 15.139200210571289, "val_accuracy": 0.0, "train_time": 0.3541371822357178, "wandb_name": "ccl-y-server-v0(2024-06-07 16:35:54.176898)"}
+[2024-06-07 16:38:47,808][flwr][INFO] - Sent reply
+[2024-06-07 16:38:47,891][flwr][INFO] - 
+[2024-06-07 16:38:47,892][flwr][INFO] - [RUN 0, ROUND ]
+[2024-06-07 16:38:47,892][flwr][INFO] - Received: evaluate message c5bbd454-fef1-4c60-9c2d-276e7dd85061
+[2024-06-07 16:38:47,912][fedops.client.client_fl][INFO] - test - {"fl_task_id": "admet2", "client_mac": "f0:2f:74:96:d6:64", "client_name": "ccl-y-server", "round": 1, "test_loss": 13.325600624084473, "test_accuracy": 0.0, "gl_model_v": 1, "wandb_name": "ccl-y-server-v0(2024-06-07 16:35:54.176898)"}
+[2024-06-07 16:38:47,940][flwr][INFO] - Sent reply
+[2024-06-07 16:38:47,962][flwr][INFO] - 
+[2024-06-07 16:38:47,962][flwr][INFO] - [RUN 0, ROUND ]
+[2024-06-07 16:38:47,962][flwr][INFO] - Received: train message 02035baf-a1e0-4855-98d4-921e3cac8399
+[2024-06-07 16:38:48,251][fedops.client.client_fl][INFO] - train_performance - {"fl_task_id": "admet2", "client_mac": "f0:2f:74:96:d6:64", "client_name": "ccl-y-server", "round": 2, "gl_model_v": 1, "train_loss": 11.66454267501831, "train_accuracy": 0.0, "val_loss": 11.198382377624512, "val_accuracy": 0.0, "train_time": 0.2850160598754883, "wandb_name": "ccl-y-server-v0(2024-06-07 16:35:54.176898)"}
+[2024-06-07 16:38:48,269][flwr][INFO] - Sent reply
+[2024-06-07 16:38:48,346][flwr][INFO] - 
+[2024-06-07 16:38:48,346][flwr][INFO] - [RUN 0, ROUND ]
+[2024-06-07 16:38:48,347][flwr][INFO] - Received: evaluate message 218b3079-163b-4fdf-ba30-eda0b78db3b3
+[2024-06-07 16:38:48,363][fedops.client.client_fl][INFO] - test - {"fl_task_id": "admet2", "client_mac": "f0:2f:74:96:d6:64", "client_name": "ccl-y-server", "round": 2, "test_loss": 9.513863563537598, "test_accuracy": 0.0, "gl_model_v": 1, "wandb_name": "ccl-y-server-v0(2024-06-07 16:35:54.176898)"}
+[2024-06-07 16:38:48,376][flwr][INFO] - Sent reply
+[2024-06-07 16:38:48,440][flwr][INFO] - 
+[2024-06-07 16:38:48,441][flwr][INFO] - [RUN 0, ROUND ]
+[2024-06-07 16:38:48,441][flwr][INFO] - Received: train message c8c05b05-ca11-45d7-85bd-7a17d90a1a8b
+[2024-06-07 16:38:48,721][fedops.client.client_fl][INFO] - train_performance - {"fl_task_id": "admet2", "client_mac": "f0:2f:74:96:d6:64", "client_name": "ccl-y-server", "round": 3, "gl_model_v": 1, "train_loss": 8.214339256286621, "train_accuracy": 0.0, "val_loss": 8.14626932144165, "val_accuracy": 0.0, "train_time": 0.2778358459472656, "wandb_name": "ccl-y-server-v0(2024-06-07 16:35:54.176898)"}
+[2024-06-07 16:38:48,735][flwr][INFO] - Sent reply
+[2024-06-07 16:38:48,905][flwr][INFO] - 
+[2024-06-07 16:38:48,905][flwr][INFO] - [RUN 0, ROUND ]
+[2024-06-07 16:38:48,905][flwr][INFO] - Received: evaluate message 42a2a362-5ad8-4ae8-bc99-f912896e8ee0
+[2024-06-07 16:38:48,924][fedops.client.client_fl][INFO] - test - {"fl_task_id": "admet2", "client_mac": "f0:2f:74:96:d6:64", "client_name": "ccl-y-server", "round": 3, "test_loss": 6.58466911315918, "test_accuracy": 0.0, "gl_model_v": 1, "wandb_name": "ccl-y-server-v0(2024-06-07 16:35:54.176898)"}
+[2024-06-07 16:38:48,937][flwr][INFO] - Sent reply
+[2024-06-07 16:38:49,004][flwr][INFO] - 
+[2024-06-07 16:38:49,005][flwr][INFO] - [RUN 0, ROUND ]
+[2024-06-07 16:38:49,005][flwr][INFO] - Received: train message 5c87db82-62ae-4cf6-8262-6e97a7c13534
+[2024-06-07 16:38:49,299][fedops.client.client_fl][INFO] - train_performance - {"fl_task_id": "admet2", "client_mac": "f0:2f:74:96:d6:64", "client_name": "ccl-y-server", "round": 4, "gl_model_v": 1, "train_loss": 6.0119240283966064, "train_accuracy": 0.0, "val_loss": 6.032851219177246, "val_accuracy": 0.0, "train_time": 0.2911040782928467, "wandb_name": "ccl-y-server-v0(2024-06-07 16:35:54.176898)"}
+[2024-06-07 16:38:49,312][flwr][INFO] - Sent reply
+[2024-06-07 16:38:49,395][flwr][INFO] - 
+[2024-06-07 16:38:49,396][flwr][INFO] - [RUN 0, ROUND ]
+[2024-06-07 16:38:49,396][flwr][INFO] - Received: evaluate message af3f1989-8812-4e84-93af-498b15c4a53d
+[2024-06-07 16:38:49,411][fedops.client.client_fl][INFO] - test - {"fl_task_id": "admet2", "client_mac": "f0:2f:74:96:d6:64", "client_name": "ccl-y-server", "round": 4, "test_loss": 4.585195064544678, "test_accuracy": 0.0, "gl_model_v": 1, "wandb_name": "ccl-y-server-v0(2024-06-07 16:35:54.176898)"}
+[2024-06-07 16:38:49,424][flwr][INFO] - Sent reply
+[2024-06-07 16:38:49,720][flwr][INFO] - 
+[2024-06-07 16:38:49,720][flwr][INFO] - [RUN 0, ROUND ]
+[2024-06-07 16:38:49,721][flwr][INFO] - Received: train message ce670e6c-361d-48af-aa02-7ad369105713
+[2024-06-07 16:38:50,012][fedops.client.client_fl][INFO] - train_performance - {"fl_task_id": "admet2", "client_mac": "f0:2f:74:96:d6:64", "client_name": "ccl-y-server", "round": 5, "gl_model_v": 1, "train_loss": 5.138781547546387, "train_accuracy": 0.0, "val_loss": 4.853918552398682, "val_accuracy": 0.0, "train_time": 0.28890061378479004, "wandb_name": "ccl-y-server-v0(2024-06-07 16:35:54.176898)"}
+[2024-06-07 16:38:50,026][flwr][INFO] - Sent reply
+[2024-06-07 16:38:50,112][flwr][INFO] - 
+[2024-06-07 16:38:50,113][flwr][INFO] - [RUN 0, ROUND ]
+[2024-06-07 16:38:50,113][flwr][INFO] - Received: evaluate message 5f9b0aae-2ddc-43ba-8da7-a05da30ba47f
+[2024-06-07 16:38:50,132][fedops.client.client_fl][INFO] - test - {"fl_task_id": "admet2", "client_mac": "f0:2f:74:96:d6:64", "client_name": "ccl-y-server", "round": 5, "test_loss": 3.5116326808929443, "test_accuracy": 0.0, "gl_model_v": 1, "wandb_name": "ccl-y-server-v0(2024-06-07 16:35:54.176898)"}
+[2024-06-07 16:38:50,145][flwr][INFO] - Sent reply
+[2024-06-07 16:38:50,149][flwr][INFO] - 
+[2024-06-07 16:38:50,150][flwr][INFO] - [RUN 0, ROUND ]
+[2024-06-07 16:38:50,150][flwr][INFO] - Received: reconnect message d8529afd-c367-4895-8e28-416d0c32609f
+[2024-06-07 16:38:50,153][flwr][DEBUG] - gRPC channel closed
+[2024-06-07 16:38:50,154][flwr][INFO] - Disconnect and shut down
+[2024-06-07 16:38:50,154][root][INFO] - fl learning finished
+[2024-06-07 16:39:03,240][root][INFO] - client_operation_time - {"fl_task_id": "admet2", "client_mac": "f0:2f:74:96:d6:64", "client_name": "ccl-y-server", "operation_time": 2.842486619949341, "gl_model_v": 1}
+[2024-06-07 16:39:03,282][root][INFO] - try notify_fin
+[2024-06-07 16:39:03,302][root][INFO] - trainFin
+[2024-06-07 16:39:03,302][root][INFO] - FL Client Learning Finish
+[2024-06-07 16:51:06,611][root][INFO] - ccl-y-server;f0:2f:74:96:d6:64-client close

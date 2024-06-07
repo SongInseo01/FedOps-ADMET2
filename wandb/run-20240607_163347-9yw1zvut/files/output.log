@@ -434,3 +434,10 @@ TypeError: Not all values are of valid type. Expected `typing.Union[int, float, 
 [32mINFO[39m:     127.0.0.1:54268 - "[1mGET /online HTTP/1.1[22m" [32m200 OK
 [32mINFO[39m:     127.0.0.1:47322 - "[1mGET /online HTTP/1.1[22m" [32m200 OK
 [32mINFO[39m:     127.0.0.1:47336 - "[1mGET /online HTTP/1.1[22m" [32m200 OK
+[32mINFO[39m:     127.0.0.1:59192 - "[1mGET /online HTTP/1.1[22m" [32m200 OK
+[32mINFO[39m:     127.0.0.1:41330 - "[1mGET /online HTTP/1.1[22m" [32m200 OK
+[2024-06-07 16:35:35,652][root][INFO] - ccl-y-server;f0:2f:74:96:d6:64-client close
+[32mINFO[39m:     Shutting down
+[32mINFO[39m:     Waiting for application shutdown.
+[32mINFO[39m:     Application shutdown complete.
+[32mINFO[39m:     Finished server process [[36m2006694[39m]

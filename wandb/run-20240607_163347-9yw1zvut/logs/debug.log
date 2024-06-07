@@ -27,3 +27,4 @@ config: {'learning_rate': 0, 'optimizer': '', 'dataset': '', 'model_architecture
 2024-06-07 16:33:58,671 INFO    MainThread:2006694 [wandb_run.py:_redirect():2144] Redirects installed.
 2024-06-07 16:33:58,672 INFO    MainThread:2006694 [wandb_init.py:init():845] run started, returning control to user process
 2024-06-07 16:33:58,724 INFO    ThreadPoolExecutor-0_0:2006694 [wandb_run.py:_config_callback():1324] config_cb None None {'batch_size': 128, 'epochs': 5, 'num_rounds': 5}
+2024-06-07 16:35:45,941 WARNING MsgRouterThr:2006694 [router.py:message_loop():77] message_loop has been closed

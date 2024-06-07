@@ -63,3 +63,4 @@ TypeError: Not all values are of valid type. Expected `typing.Union[int, float, 
 [2024-06-07 16:33:59,592][flwr][DEBUG] - gRPC channel closed
 [2024-06-07 16:33:59,611][root][INFO] - notify_fail start
 [2024-06-07 16:33:59,631][root][ERROR] - trainFin
+[2024-06-07 16:35:35,652][root][INFO] - ccl-y-server;f0:2f:74:96:d6:64-client close

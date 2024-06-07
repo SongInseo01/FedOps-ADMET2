@@ -1,0 +1,101 @@
+wandb_version: 1
+
+learning_rate:
+  desc: null
+  value: 0
+optimizer:
+  desc: null
+  value: ''
+dataset:
+  desc: null
+  value: carboxylic
+model_architecture:
+  desc: null
+  value: SMILESModel
+batch_size:
+  desc: null
+  value: 128
+epochs:
+  desc: null
+  value: 5
+num_rounds:
+  desc: null
+  value: 5
+_wandb:
+  desc: null
+  value:
+    python_version: 3.11.5
+    cli_version: 0.15.12
+    framework: huggingface
+    huggingface_version: 4.39.1
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    start_time: 1717745915.754264
+    t:
+      1:
+      - 1
+      - 2
+      - 3
+      - 5
+      - 11
+      - 30
+      - 41
+      - 49
+      - 50
+      - 53
+      - 55
+      - 105
+      2:
+      - 1
+      - 2
+      - 3
+      - 5
+      - 11
+      - 30
+      - 41
+      - 49
+      - 50
+      - 53
+      - 55
+      - 105
+      3:
+      - 2
+      - 13
+      - 16
+      - 23
+      4: 3.11.5
+      5: 0.15.12
+      6: 4.39.1
+      8:
+      - 5
+      13: linux-x86_64
+    visualize:
+      Data Lable Histogram:
+        panel_type: Vega2
+        panel_config:
+          panelDefId: wandb/bar/v0
+          fieldSettings:
+            label: label
+            value: data_size
+          stringSettings:
+            title: Data Size Distribution
+          transform:
+            name: tableWithLeafColNames
+          userQuery:
+            queryFields:
+            - name: runSets
+              args:
+              - name: runSets
+                value: ${runSets}
+              fields:
+              - name: id
+                fields: []
+              - name: name
+                fields: []
+              - name: _defaultColorIndex
+                fields: []
+              - name: summaryTable
+                args:
+                - name: tableKey
+                  value: Data Lable Histogram_table
+                fields: []
