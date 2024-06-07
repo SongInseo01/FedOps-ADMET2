@@ -78,9 +78,9 @@ def load_partition(dataset, validation_split, batch_size):
 
 
     # DataLoader for client training, validation, and test
-    train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
-    val_loader = DataLoader(train_dataset, batch_size=batch_size)
-    test_loader = DataLoader(test_dataset, batch_size=batch_size)
+    train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True, collate_fn=collate_fn)
+    val_loader = DataLoader(train_dataset, batch_size=batch_size, collate_fn=collate_fn)
+    test_loader = DataLoader(test_dataset, batch_size=batch_size, collate_fn=collate_fn)
 
     return train_loader, val_loader, test_loader
 
@@ -113,6 +113,6 @@ def gl_model_torch_validation(batch_size):
     test_dataloader = DataLoader(test_dataset, batch_size=32, shuffle=False, collate_fn=collate_fn)
 
     # DataLoader for global model validation
-    gl_val_loader = DataLoader(test_dataset, batch_size=batch_size)
+    gl_val_loader = DataLoader(test_dataset, batch_size=batch_size, collate_fn=collate_fn)
 
     return gl_val_loader
