@@ -60,7 +60,7 @@ def train_torch():
                 best_model = model.state_dict()
 
             model.load_state_dict(best_model)
-        return model, best_val_loss
+        return model
 
     return custom_train_torch
 

@@ -1,0 +1,4 @@
+[2024-06-07 16:22:51,287][__main__][INFO] - data loaded
+[2024-06-07 16:22:51,305][__main__][INFO] - Latest Local Model download
+[2024-06-07 16:22:51,305][root][INFO] - downloaded local_model_name: SMILESModel_local_model_V1.pth
+[2024-06-07 16:22:51,307][root][INFO] - init model_type: Pytorch
