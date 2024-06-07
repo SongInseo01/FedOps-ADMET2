@@ -33,11 +33,12 @@ def main(cfg: DictConfig) -> None:
     Client data load function
     After setting model method in data_preparation.py, call the model method.
     """
-    train_loader, val_loader, test_loader, y_label_counter = data_preparation.load_partition(dataset=cfg.dataset.name, 
+    train_loader, val_loader, test_loader = data_preparation.load_partition(dataset=cfg.dataset.name, 
                                                                         validation_split=cfg.dataset.validation_split, 
-                                                                        batch_size=cfg.batch_size,
-                                                                        label_count=cfg.model.output_size) 
+                                                                        batch_size=cfg.batch_size) 
     
+    y_label_counter = 1
+
     logger.info('data loaded')
 
     """
