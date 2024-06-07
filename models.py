@@ -63,11 +63,14 @@ def test_torch():
 
         average_loss = sum(test_losses) / len(test_losses)
         accuracy = None  # Accuracy metric can be defined based on the specific task, if required
+        f1 = f1_score(all_targets, [1 if pred > 0.5 else 0 for pred in all_predictions])  # Example threshold for binary classification
+
+        metrics = {"f1_score": f1}
 
         print(f'Mean Test Loss: {average_loss:.4f}')
-
+        print(f'F1 Score: {f1:.4f}')
 
         model.to("cpu")  # move model back to CPU
-        return average_loss, accuracy
+        return average_loss, accuracy, metrics
 
     return custom_test_torch

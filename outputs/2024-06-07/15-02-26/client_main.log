@@ -1,0 +1,3 @@
+[2024-06-07 15:02:26,658][__main__][INFO] - data loaded
+[2024-06-07 15:02:26,678][root][INFO] - init model_type: Pytorch
+[2024-06-07 15:05:03,338][root][INFO] - ccl-y-server;f0:2f:74:96:d6:64-client close
